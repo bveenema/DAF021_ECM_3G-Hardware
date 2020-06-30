@@ -1,0 +1,6 @@
+(fp_lib_table
+  (lib (name VDW-Modules)(type KiCad)(uri ${KIPRJMOD}/lib/VDW-Kicad-Footprints/VDW-Modules.pretty)(options "")(descr ""))
+  (lib (name VDW-Particle)(type KiCad)(uri ${KIPRJMOD}/lib/VDW-Kicad-Footprints/VDW-Particle.pretty)(options "")(descr ""))
+  (lib (name NoFootprint)(type KiCad)(uri ${KIPRJMOD}/lib/VDW-Kicad-Footprints/NoFootprint.pretty)(options "")(descr ""))
+  (lib (name VDW-Logos)(type KiCad)(uri ${KIPRJMOD}/lib/VDW-Kicad-Footprints/VDW-Logos.pretty)(options "")(descr ""))
+)

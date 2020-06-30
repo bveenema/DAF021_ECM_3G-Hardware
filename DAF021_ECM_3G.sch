@@ -1,0 +1,2645 @@
+EESchema Schematic File Version 4
+LIBS:DAF021_ECM_3G-cache
+EELAYER 29 0
+EELAYER END
+$Descr B 17000 11000
+encoding utf-8
+Sheet 1 8
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Conn_01x02_Male J5
+U 1 1 5ED92A3E
+P 5100 6250
+F 0 "J5" H 5100 6350 50  0000 C CNN
+F 1 "Horn" H 5100 6050 50  0000 C CNN
+F 2 "Connector_JST:JST_XH_B2B-XH-AM_1x02_P2.50mm_Vertical" H 5100 6250 50  0001 C CNN
+F 3 "http://www.jst-mfg.com/product/pdf/eng/eXH.pdf" H 5100 6250 50  0001 C CNN
+F 4 "B2B-XH-A(LF)(SN)" H 0   0   50  0001 C CNN "MPN"
+F 5 "DigiKey" H 0   0   50  0001 C CNN "Vendor"
+F 6 "455-2247-ND" H 0   0   50  0001 C CNN "Vendor P/N"
+	1    5100 6250
+	1    0    0    1   
+$EndComp
+Text GLabel 13650 6100 0    50   Input ~ 0
+AUX_AN
+Text GLabel 13650 6200 0    50   Input ~ 0
+AUS_RST
+Text GLabel 13650 6300 0    50   Input ~ 0
+AUX_CS
+Text GLabel 13650 6400 0    50   Input ~ 0
+SCK
+Text GLabel 14150 5700 2    50   Input ~ 0
+MISO
+Text GLabel 14150 5800 2    50   Input ~ 0
+MOSI
+Text GLabel 14150 5900 2    50   Input ~ 0
+AUX_PWM
+Text GLabel 14150 6000 2    50   Input ~ 0
+AUX_INT
+Text GLabel 7900 3350 0    50   Input ~ 0
+AUX_RX
+Text GLabel 7900 3250 0    50   Input ~ 0
+AUX_TX
+Text GLabel 14150 6300 2    50   Input ~ 0
+SCL
+Text GLabel 14150 6400 2    50   Input ~ 0
+SDA
+$Comp
+L Connector_Generic:Conn_02x09_Odd_Even J8
+U 1 1 5ED4F4C8
+P 13850 6100
+F 0 "J8" H 13900 6650 50  0000 C CNN
+F 1 "AUX" H 13900 5550 50  0000 C CNN
+F 2 "Connector_JST:JST_XAD_B18B-XADSS-N-A_2x09_P2.50mm_Vertical" H 13850 6100 50  0001 C CNN
+F 3 "http://www.jst-mfg.com/product/pdf/eng/eXAD1.pdf" H 13850 6100 50  0001 C CNN
+F 4 "B18B-XADSS-N(LF)(SN)" H 0   0   50  0001 C CNN "MPN"
+F 5 "DigiKey" H 0   0   50  0001 C CNN "Vendor"
+F 6 "455-2011-ND" H 0   0   50  0001 C CNN "Vendor P/N"
+	1    13850 6100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13650 5700 13450 5700
+Wire Wire Line
+	13300 5800 13650 5800
+Wire Wire Line
+	13650 5900 13450 5900
+Wire Wire Line
+	13300 6000 13650 6000
+$Comp
+L RF_Module:RFM69HCW U4
+U 1 1 5EE1A2F0
+P 1900 1950
+F 0 "U4" H 1490 2410 50  0000 L CNN
+F 1 "RFM69HCW" H 1960 2400 50  0000 L CNN
+F 2 "RF_Module:HOPERF_RFM69HCW" H -1400 3600 50  0001 C CNN
+F 3 "https://www.hoperf.com/data/upload/portal/20181127/5bfcb8284d838.pdf" H -1400 3600 50  0001 C CNN
+F 4 "COM-13910" H 1900 1950 50  0001 C CNN "MPN"
+F 5 "DigiKey" H 1900 1950 50  0001 C CNN "Vendor"
+F 6 "1568-1391-ND" H 1900 1950 50  0001 C CNN "Vendor P/N"
+F 7 "SparkFun" H 1900 1950 50  0001 C CNN "Alt Vendor"
+F 8 "COM-13910" H 1900 1950 50  0001 C CNN "Alt Vendor P/N"
+	1    1900 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 1450 1900 1100
+$Comp
+L power:+3V3 #PWR022
+U 1 1 5EE1A2F7
+P 1900 1050
+F 0 "#PWR022" H 1900 900 50  0001 C CNN
+F 1 "+3V3" H 1900 1190 50  0000 C CNN
+F 2 "" H 1900 1050 50  0001 C CNN
+F 3 "" H 1900 1050 50  0001 C CNN
+	1    1900 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C4
+U 1 1 5EE1A302
+P 2600 1250
+F 0 "C4" H 2700 1200 50  0000 L CNN
+F 1 "0.1uF" H 2700 1300 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2600 1250 50  0001 C CNN
+F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL21B104KCFWPNE.jsp" H 2600 1250 50  0001 C CNN
+F 4 "~" H -4850 -2200 50  0001 C CNN "Alt Vendor"
+F 5 "~" H -4850 -2200 50  0001 C CNN "Alt Vendor P/N"
+F 6 "CL21B104KCFWPNE" H -4850 -2200 50  0001 C CNN "MPN"
+F 7 "DigiKey" H -4850 -2200 50  0001 C CNN "Vendor"
+F 8 "1276-6733-1-ND" H -4850 -2200 50  0001 C CNN "Vendor P/N"
+	1    2600 1250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5EE1A30D
+P 2800 1250
+AR Path="/5C2E7DBE/5EE1A30D" Ref="C?"  Part="1" 
+AR Path="/5EE1A30D" Ref="C5"  Part="1" 
+F 0 "C5" H 2700 1200 50  0000 R CNN
+F 1 "10uF" H 2700 1300 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2800 1250 50  0001 C CNN
+F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL21A106KOQNNNG.jsp" H 2800 1250 50  0001 C CNN
+F 4 "CL21A106KOQNNNG" H 2800 1250 50  0001 C CNN "MPN"
+F 5 "DigiKey" H 2800 1250 50  0001 C CNN "Vendor"
+F 6 "1276-6455-1-ND" H 2800 1250 50  0001 C CNN "Vendor P/N"
+F 7 "~" H 2800 1250 50  0001 C CNN "Alt Vendor"
+F 8 "~" H 2800 1250 50  0001 C CNN "Alt Vendor P/N"
+	1    2800 1250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2800 1150 2800 1100
+Wire Wire Line
+	2800 1100 2600 1100
+Wire Wire Line
+	2600 1100 2600 1150
+Connection ~ 2600 1100
+Wire Wire Line
+	1900 1100 2600 1100
+Connection ~ 1900 1100
+Wire Wire Line
+	1900 1100 1900 1050
+$Comp
+L power:GND #PWR023
+U 1 1 5EE1A31A
+P 1900 2700
+F 0 "#PWR023" H 1900 2450 50  0001 C CNN
+F 1 "GND" H 1900 2550 50  0000 C CNN
+F 2 "" H 1900 2700 50  0001 C CNN
+F 3 "" H 1900 2700 50  0001 C CNN
+	1    1900 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 2550 1900 2650
+Wire Wire Line
+	1800 2550 1800 2650
+Wire Wire Line
+	1800 2650 1900 2650
+Connection ~ 1900 2650
+Wire Wire Line
+	1900 2650 1900 2700
+Wire Wire Line
+	2000 2550 2000 2650
+Wire Wire Line
+	2000 2650 1900 2650
+$Comp
+L power:GND #PWR024
+U 1 1 5EE1A327
+P 2600 1350
+F 0 "#PWR024" H 2600 1100 50  0001 C CNN
+F 1 "GND" H 2600 1200 50  0000 C CNN
+F 2 "" H 2600 1350 50  0001 C CNN
+F 3 "" H 2600 1350 50  0001 C CNN
+	1    2600 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR025
+U 1 1 5EE1A32D
+P 2800 1350
+F 0 "#PWR025" H 2800 1100 50  0001 C CNN
+F 1 "GND" H 2800 1200 50  0000 C CNN
+F 2 "" H 2800 1350 50  0001 C CNN
+F 3 "" H 2800 1350 50  0001 C CNN
+	1    2800 1350
+	1    0    0    -1  
+$EndComp
+Text GLabel 1300 1650 0    50   Input ~ 0
+SCK
+Text GLabel 1300 1750 0    50   Input ~ 0
+MOSI
+Text GLabel 1300 1850 0    50   Input ~ 0
+MISO
+Wire Wire Line
+	1300 1650 1400 1650
+Wire Wire Line
+	1300 1750 1400 1750
+Wire Wire Line
+	1300 1850 1400 1850
+Text GLabel 1300 1950 0    50   Input ~ 0
+RADIO_CS
+Wire Wire Line
+	1300 1950 1400 1950
+Text GLabel 1300 2150 0    50   Input ~ 0
+I2C_RESET
+Wire Wire Line
+	1300 2150 1400 2150
+$Comp
+L Connector:Conn_01x02_Female J14
+U 1 1 5EE1A342
+P 3350 1650
+F 0 "J14" H 3350 1850 50  0000 C CNN
+F 1 "Antenna" H 3350 1450 50  0000 C CNN
+F 2 "Connector_Coaxial:U.FL_Hirose_U.FL-R-SMT-1_Vertical" H 3350 1650 50  0001 C CNN
+F 3 "https://www.hirose.com/product/download/?distributor=digikey&type=2d&lang=en&num=U.FL-R-SMT-1(01)" H 3350 1650 50  0001 C CNN
+F 4 "U.FL-R-SMT-1(01)" H 3350 1650 50  0001 C CNN "MPN"
+F 5 "DigiKey" H 3350 1650 50  0001 C CNN "Vendor"
+F 6 "H122041-ND" H 3350 1650 50  0001 C CNN "Vendor P/N"
+F 7 "~" H 3350 1650 50  0001 C CNN "Alt Vendor"
+F 8 "~" H 3350 1650 50  0001 C CNN "Alt Vendor P/N"
+	1    3350 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 1650 2400 1650
+$Comp
+L power:GND #PWR027
+U 1 1 5EE1A34B
+P 3050 1800
+F 0 "#PWR027" H 3050 1550 50  0001 C CNN
+F 1 "GND" H 3050 1650 50  0000 C CNN
+F 2 "" H 3050 1800 50  0001 C CNN
+F 3 "" H 3050 1800 50  0001 C CNN
+	1    3050 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 1750 3050 1750
+Wire Wire Line
+	3050 1750 3050 1800
+Text GLabel 3000 2350 2    50   Input ~ 0
+RADIO_INT
+Wire Wire Line
+	2550 1850 2400 1850
+Wire Wire Line
+	2550 1950 2400 1950
+$Comp
+L Jumper:SolderJumper_2_Open JP7
+U 1 1 5EE1A375
+P 2700 2050
+F 0 "JP7" H 2500 2100 50  0000 C CNN
+F 1 "Jumper_NO_Small" H 2700 1950 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 2700 2050 50  0001 C CNN
+F 3 "~" H 2700 2050 50  0001 C CNN
+F 4 "N/A" H 2700 2050 50  0001 C CNN "MPN"
+F 5 "N/A" H 2700 2050 50  0001 C CNN "Vendor"
+F 6 "N/A" H 2700 2050 50  0001 C CNN "Vendor P/N"
+F 7 "N/A" H 2700 2050 50  0001 C CNN "Alt Vendor"
+F 8 "N/A" H 2700 2050 50  0001 C CNN "Alt Vendor P/N"
+F 9 "DNF" H 2700 2050 50  0001 C CNN "Config"
+	1    2700 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 2050 2400 2050
+$Comp
+L Jumper:SolderJumper_2_Open JP8
+U 1 1 5EE1A382
+P 2700 2150
+F 0 "JP8" H 2500 2200 50  0000 C CNN
+F 1 "Jumper_NO_Small" H 2700 2050 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 2700 2150 50  0001 C CNN
+F 3 "~" H 2700 2150 50  0001 C CNN
+F 4 "N/A" H 2700 2150 50  0001 C CNN "MPN"
+F 5 "N/A" H 2700 2150 50  0001 C CNN "Vendor"
+F 6 "N/A" H 2700 2150 50  0001 C CNN "Vendor P/N"
+F 7 "N/A" H 2700 2150 50  0001 C CNN "Alt Vendor"
+F 8 "N/A" H 2700 2150 50  0001 C CNN "Alt Vendor P/N"
+F 9 "DNF" H 2700 2150 50  0001 C CNN "Config"
+	1    2700 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 2150 2400 2150
+$Comp
+L Jumper:SolderJumper_2_Open JP9
+U 1 1 5EE1A38F
+P 2700 2250
+F 0 "JP9" H 2500 2300 50  0000 C CNN
+F 1 "Jumper_NO_Small" H 2700 2150 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 2700 2250 50  0001 C CNN
+F 3 "~" H 2700 2250 50  0001 C CNN
+F 4 "N/A" H 2700 2250 50  0001 C CNN "MPN"
+F 5 "N/A" H 2700 2250 50  0001 C CNN "Vendor"
+F 6 "N/A" H 2700 2250 50  0001 C CNN "Vendor P/N"
+F 7 "N/A" H 2700 2250 50  0001 C CNN "Alt Vendor"
+F 8 "N/A" H 2700 2250 50  0001 C CNN "Alt Vendor P/N"
+F 9 "DNF" H 2700 2250 50  0001 C CNN "Config"
+	1    2700 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 2250 2400 2250
+$Comp
+L Jumper:SolderJumper_2_Open JP10
+U 1 1 5EE1A39C
+P 2700 2350
+F 0 "JP10" H 2500 2400 50  0000 C CNN
+F 1 "Jumper_NO_Small" H 2700 2250 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 2700 2350 50  0001 C CNN
+F 3 "~" H 2700 2350 50  0001 C CNN
+F 4 "N/A" H 2700 2350 50  0001 C CNN "MPN"
+F 5 "N/A" H 2700 2350 50  0001 C CNN "Vendor"
+F 6 "N/A" H 2700 2350 50  0001 C CNN "Vendor P/N"
+F 7 "N/A" H 2700 2350 50  0001 C CNN "Alt Vendor"
+F 8 "N/A" H 2700 2350 50  0001 C CNN "Alt Vendor P/N"
+F 9 "DNF" H 2700 2350 50  0001 C CNN "Config"
+	1    2700 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 2350 2400 2350
+Wire Wire Line
+	3000 2350 2900 2350
+Wire Wire Line
+	2900 2350 2900 2250
+Wire Wire Line
+	2900 2250 2850 2250
+Connection ~ 2900 2350
+Wire Wire Line
+	2900 2350 2850 2350
+Wire Wire Line
+	2850 2150 2900 2150
+Wire Wire Line
+	2900 2150 2900 2250
+Connection ~ 2900 2250
+Wire Wire Line
+	2900 2150 2900 2050
+Wire Wire Line
+	2900 2050 2850 2050
+Connection ~ 2900 2150
+Wire Wire Line
+	2900 2050 2900 1950
+Wire Wire Line
+	2900 1950 2850 1950
+Connection ~ 2900 2050
+Wire Wire Line
+	2900 1950 2900 1850
+Wire Wire Line
+	2900 1850 2850 1850
+Connection ~ 2900 1950
+Text Notes 1300 800  0    125  ~ 0
+Radio Transciever
+Wire Wire Line
+	7750 9000 7200 9000
+Wire Wire Line
+	7750 9100 7200 9100
+Text Label 7300 9100 0    60   ~ 0
+USB(-)
+Text Label 7300 9000 0    60   ~ 0
+USB(+)
+$Comp
+L power:GND #PWR?
+U 1 1 5EF8B292
+P 8100 9500
+AR Path="/5ED93B63/5EF8B292" Ref="#PWR?"  Part="1" 
+AR Path="/5EF8B292" Ref="#PWR019"  Part="1" 
+F 0 "#PWR019" H 8100 9250 50  0001 C CNN
+F 1 "GND" H 8100 9350 50  0000 C CNN
+F 2 "" H 8100 9500 50  0001 C CNN
+F 3 "" H 8100 9500 50  0001 C CNN
+	1    8100 9500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper_NO_Small JP?
+U 1 1 5EF8B29E
+P 7500 8800
+AR Path="/5ED93B63/5EF8B29E" Ref="JP?"  Part="1" 
+AR Path="/5EF8B29E" Ref="JP4"  Part="1" 
+F 0 "JP4" H 7500 8880 50  0000 C CNN
+F 1 "Jumper_NO_Small" H 7700 8950 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 7500 8800 50  0001 C CNN
+F 3 "~" H 7500 8800 50  0001 C CNN
+F 4 "N/A" H 7500 8800 50  0001 C CNN "MPN"
+F 5 "N/A" H 7500 8800 50  0001 C CNN "Vendor"
+F 6 "N/A" H 7500 8800 50  0001 C CNN "Vendor P/N"
+F 7 "N/A" H 7500 8800 50  0001 C CNN "Alt Vendor"
+F 8 "N/A" H 7500 8800 50  0001 C CNN "Alt Vendor P/N"
+F 9 "DNF" H -7250 6250 50  0001 C CNN "Config"
+	1    7500 8800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 8800 7650 8800
+Wire Wire Line
+	7400 8800 7300 8800
+Wire Wire Line
+	7300 8800 7300 8700
+$Comp
+L power:+5V #PWR?
+U 1 1 5EF8B2A7
+P 7300 8700
+AR Path="/5ED93B63/5EF8B2A7" Ref="#PWR?"  Part="1" 
+AR Path="/5EF8B2A7" Ref="#PWR018"  Part="1" 
+F 0 "#PWR018" H 7300 8550 50  0001 C CNN
+F 1 "+5V" H 7300 8840 50  0000 C CNN
+F 2 "" H 7300 8700 50  0001 C CNN
+F 3 "" H 7300 8700 50  0001 C CNN
+	1    7300 8700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:USB_B J?
+U 1 1 5EF8B2B2
+P 8050 9000
+AR Path="/5C382015/5EF8B2B2" Ref="J?"  Part="1" 
+AR Path="/5EF8B2B2" Ref="J13"  Part="1" 
+AR Path="/5ED93B63/5EF8B2B2" Ref="J?"  Part="1" 
+F 0 "J13" H 7821 8991 50  0000 R CNN
+F 1 "Service" H 7821 8900 50  0000 R CNN
+F 2 "Connector_USB:USB_B_Molex_67068-8000_Horizontal" H 8200 8950 50  0001 C CNN
+F 3 "https://www.molex.com/pdm_docs/sd/670688000_sd.pdf" H 8200 8950 50  0001 C CNN
+F 4 "~" H -7800 6100 50  0001 C CNN "Alt Vendor"
+F 5 "~" H -7800 6100 50  0001 C CNN "Alt Vendor P/N"
+F 6 "0670688000" H 0   0   50  0001 C CNN "MPN"
+F 7 "DigiKey" H 0   0   50  0001 C CNN "Vendor"
+F 8 "WM17113-ND" H 0   0   50  0001 C CNN "Vendor P/N"
+	1    8050 9000
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 9400 8050 9450
+Wire Wire Line
+	8050 9450 8100 9450
+Wire Wire Line
+	8100 9450 8100 9500
+Wire Wire Line
+	8150 9400 8150 9450
+Wire Wire Line
+	8150 9450 8100 9450
+Connection ~ 8100 9450
+Wire Wire Line
+	7200 9200 7550 9200
+Wire Wire Line
+	7550 9200 7550 9450
+Wire Wire Line
+	7550 9450 8050 9450
+Connection ~ 8050 9450
+Wire Wire Line
+	7200 8900 7650 8900
+Wire Wire Line
+	7650 8900 7650 8800
+Wire Wire Line
+	7650 8800 7750 8800
+Connection ~ 7650 8800
+$Comp
+L Connector:Conn_01x05_Male J?
+U 1 1 5EF8B2CC
+P 7000 9000
+AR Path="/5ED93B63/5EF8B2CC" Ref="J?"  Part="1" 
+AR Path="/5EF8B2CC" Ref="J12"  Part="1" 
+F 0 "J12" H 6950 8950 50  0000 R CNN
+F 1 "USB_DEBUG" H 6950 9050 50  0000 R CNN
+F 2 "Connector_JST:JST_XH_B5B-XH-AM_1x05_P2.50mm_Vertical" H 7000 9000 50  0001 C CNN
+F 3 "http://www.jst-mfg.com/product/pdf/eng/eXH.pdf" H 7000 9000 50  0001 C CNN
+F 4 "B5B-XH-AM(LF)(SN)" H 7000 9000 50  0001 C CNN "MPN"
+F 5 "DigiKey" H 7000 9000 50  0001 C CNN "Vendor"
+F 6 "455-2239-ND" H 7000 9000 50  0001 C CNN "Vendor P/N"
+F 7 "~" H 7000 9000 50  0001 C CNN "Alt Vendor"
+F 8 "~" H 7000 9000 50  0001 C CNN "Alt Vendor P/N"
+F 9 "DNF" H 7000 9000 50  0001 C CNN "Config"
+	1    7000 9000
+	1    0    0    1   
+$EndComp
+NoConn ~ 7200 8800
+Text Notes 6500 8350 0    125  ~ 0
+USB
+$Comp
+L Device:R_Small R?
+U 1 1 5F050706
+P 3350 4050
+AR Path="/5ED93B63/5F050706" Ref="R?"  Part="1" 
+AR Path="/5F050706" Ref="R9"  Part="1" 
+F 0 "R9" H 3409 4096 50  0000 L CNN
+F 1 "4.7k 0.5%" H 3409 4005 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3350 4050 50  0001 C CNN
+F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C328.pdf" H 3350 4050 50  0001 C CNN
+F 4 "ERJ-PB6D4701V" H 1200 -4950 50  0001 C CNN "MPN"
+F 5 "DigiKey" H 1200 -4950 50  0001 C CNN "Vendor"
+F 6 "P21095CT-ND" H 1200 -4950 50  0001 C CNN "Vendor P/N"
+F 7 "~" H 1200 -4950 50  0001 C CNN "Alt Vendor"
+F 8 "~" H 1200 -4950 50  0001 C CNN "Alt Vendor P/N"
+	1    3350 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 3950 3350 3900
+Wire Wire Line
+	3350 3900 3600 3900
+Wire Wire Line
+	3350 4150 3350 4200
+Wire Wire Line
+	5100 4000 5400 4000
+Wire Wire Line
+	5200 4100 5100 4100
+$Comp
+L Device:C_Small C?
+U 1 1 5F07F2E1
+P 5400 4150
+AR Path="/5ED93B63/5F07F2E1" Ref="C?"  Part="1" 
+AR Path="/5F07F2E1" Ref="C3"  Part="1" 
+F 0 "C3" H 5500 4100 50  0000 L CNN
+F 1 "0.1uF" H 5500 4200 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5400 4150 50  0001 C CNN
+F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL21B104KCFWPNE.jsp" H 5400 4150 50  0001 C CNN
+F 4 "CL21B104KCFWPNE" H -1300 700 50  0001 C CNN "MPN"
+F 5 "DigiKey" H -1300 700 50  0001 C CNN "Vendor"
+F 6 "1276-6733-1-ND" H -1300 700 50  0001 C CNN "Vendor P/N"
+F 7 "~" H -1300 700 50  0001 C CNN "Alt Vendor"
+F 8 "~" H -1300 700 50  0001 C CNN "Alt Vendor P/N"
+	1    5400 4150
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	5200 4100 5200 4300
+Wire Wire Line
+	5400 4050 5400 4000
+Connection ~ 5400 4000
+Wire Wire Line
+	5400 4000 5850 4000
+Wire Wire Line
+	5200 4300 5400 4300
+Wire Wire Line
+	5400 4300 5400 4250
+Connection ~ 5200 4300
+Wire Wire Line
+	5200 4300 5200 4350
+$Comp
+L power:GNDA #PWR?
+U 1 1 5F07F2EF
+P 5200 4350
+AR Path="/5ED93B63/5F07F2EF" Ref="#PWR?"  Part="1" 
+AR Path="/5F07F2EF" Ref="#PWR017"  Part="1" 
+F 0 "#PWR017" H 5200 4100 50  0001 C CNN
+F 1 "GNDA" H 5200 4200 50  0000 C CNN
+F 2 "" H 5200 4350 50  0001 C CNN
+F 3 "" H 5200 4350 50  0001 C CNN
+	1    5200 4350
+	1    0    0    -1  
+$EndComp
+Text Notes 4800 3500 0    125  ~ 0
+Pail Sensor
+$Comp
+L power:+5V #PWR?
+U 1 1 5F0AD35A
+P 5450 1900
+AR Path="/5ED93B63/5F0AD35A" Ref="#PWR?"  Part="1" 
+AR Path="/5F0AD35A" Ref="#PWR032"  Part="1" 
+F 0 "#PWR032" H 5450 1750 50  0001 C CNN
+F 1 "+5V" V 5450 2100 50  0000 C CNN
+F 2 "" H 5450 1900 50  0001 C CNN
+F 3 "" H 5450 1900 50  0001 C CNN
+	1    5450 1900
+	0    1    1    0   
+$EndComp
+$Comp
+L VDW_Modules:AK-220V-119 U?
+U 1 1 5F0AD366
+P 4950 1700
+AR Path="/5ED93B63/5F0AD366" Ref="U?"  Part="1" 
+AR Path="/5F0AD366" Ref="U6"  Part="1" 
+F 0 "U6" H 4950 2200 60  0000 C CNN
+F 1 "AK-220V-119" H 5000 2100 60  0000 C CNN
+F 2 "VDW-Modules:AK-220V-119" H 5900 2300 60  0001 C CNN
+F 3 "http://a.co/d/9ubzAsf" H 5900 2300 60  0001 C CNN
+F 4 "AK-220V-119" H 4950 1700 50  0001 C CNN "MPN"
+F 5 "Amazon" H 4950 1700 50  0001 C CNN "Vendor"
+F 6 "B078RFJTMZ" H 4950 1700 50  0001 C CNN "Vendor P/N"
+F 7 "~" H 4950 1700 50  0001 C CNN "Alt Vendor"
+F 8 "~" H 4950 1700 50  0001 C CNN "Alt Vendor P/N"
+F 9 "DNF" H 4950 1700 50  0001 C CNN "Config"
+	1    4950 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 1800 5750 1800
+$Comp
+L power:GND #PWR?
+U 1 1 5F0AD36D
+P 5750 1800
+AR Path="/5ED93B63/5F0AD36D" Ref="#PWR?"  Part="1" 
+AR Path="/5F0AD36D" Ref="#PWR035"  Part="1" 
+F 0 "#PWR035" H 5750 1550 50  0001 C CNN
+F 1 "GND" V 5750 1600 50  0000 C CNN
+F 2 "" H 5750 1800 50  0001 C CNN
+F 3 "" H 5750 1800 50  0001 C CNN
+	1    5750 1800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5250 1900 5450 1900
+$Comp
+L power:GND #PWR?
+U 1 1 5F0AD374
+P 5750 2000
+AR Path="/5ED93B63/5F0AD374" Ref="#PWR?"  Part="1" 
+AR Path="/5F0AD374" Ref="#PWR036"  Part="1" 
+F 0 "#PWR036" H 5750 1750 50  0001 C CNN
+F 1 "GND" V 5750 1800 50  0000 C CNN
+F 2 "" H 5750 2000 50  0001 C CNN
+F 3 "" H 5750 2000 50  0001 C CNN
+	1    5750 2000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5250 2000 5750 2000
+Text GLabel 5450 1700 2    50   Input ~ 0
+USER_REMOTE
+Wire Wire Line
+	5450 1700 5350 1700
+Text Notes 4800 1000 0    125  ~ 0
+Simple Remote
+$Comp
+L MCU_Particle-VDW:Boron U3
+U 1 1 601ED059
+P 9000 2800
+F 0 "U3" H 9100 2000 50  0000 C CNN
+F 1 "Boron" H 8750 2000 50  0000 C CNN
+F 2 "VDW-Particle:Argon_Boron_Xenon" H 9000 2800 50  0001 C CNN
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/Particle%20PDFs/Boron_LTE_Web.pdf" H 9000 2800 50  0001 C CNN
+F 4 "BRN402" H 0   0   50  0001 C CNN "MPN"
+F 5 "1878-1023-ND" H 0   0   50  0001 C CNN "Vendor P/N"
+F 6 "DigiKey" H 0   0   50  0001 C CNN "Vendor"
+	1    9000 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR016
+U 1 1 5F2B5EC8
+P 5200 3750
+F 0 "#PWR016" H 5200 3600 50  0001 C CNN
+F 1 "+5V" H 5200 3890 50  0000 C CNN
+F 2 "" H 5200 3750 50  0001 C CNN
+F 3 "" H 5200 3750 50  0001 C CNN
+	1    5200 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 3750 5200 3900
+Wire Wire Line
+	5200 3900 5100 3900
+Wire Wire Line
+	6300 8900 6300 8800
+Wire Wire Line
+	6300 9800 6300 9700
+Wire Wire Line
+	7700 9750 7700 9650
+$Comp
+L Connector:Conn_01x03_Male J4
+U 1 1 5EF003AE
+P 4900 4000
+F 0 "J4" H 4900 4200 50  0000 C CNN
+F 1 "Pail Sensor" H 4900 3800 50  0000 C CNN
+F 2 "Connector_JST:JST_XH_B3B-XH-AM_1x03_P2.50mm_Vertical" H 4900 4000 50  0001 C CNN
+F 3 "http://www.jst-mfg.com/product/pdf/eng/eXH.pdf" H 4900 4000 50  0001 C CNN
+F 4 "B3B-XH-AM(LF)(SN)" H 0   0   50  0001 C CNN "MPN"
+F 5 "DigiKey" H 0   0   50  0001 C CNN "Vendor"
+F 6 "455-2231-ND" H 0   0   50  0001 C CNN "Vendor P/N"
+	1    4900 4000
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	13300 6500 13650 6500
+Wire Wire Line
+	11650 3250 11300 3250
+Wire Wire Line
+	11650 3350 11300 3350
+Text Label 11300 3250 0    50   ~ 0
+Argon_RX
+Text Label 11300 3350 0    50   ~ 0
+Argon_TX
+Wire Wire Line
+	8350 3250 7900 3250
+Wire Wire Line
+	8350 3350 7900 3350
+Text Label 7900 3250 0    50   ~ 0
+Argon_TX
+Text Label 7900 3350 0    50   ~ 0
+Argon_RX
+Text GLabel 8350 2950 0    50   Input ~ 0
+SCK
+Text GLabel 8350 3050 0    50   Input ~ 0
+MOSI
+Text GLabel 8350 3150 0    50   Input ~ 0
+MISO
+$Comp
+L power:GND #PWR028
+U 1 1 5F2ED732
+P 11500 2250
+F 0 "#PWR028" H 11500 2000 50  0001 C CNN
+F 1 "GND" H 11500 2100 50  0000 C CNN
+F 2 "" H 11500 2250 50  0001 C CNN
+F 3 "" H 11500 2250 50  0001 C CNN
+	1    11500 2250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	11500 2250 11650 2250
+$Comp
+L power:GND #PWR021
+U 1 1 5F3233A6
+P 7800 2250
+F 0 "#PWR021" H 7800 2000 50  0001 C CNN
+F 1 "GND" H 7800 2100 50  0000 C CNN
+F 2 "" H 7800 2250 50  0001 C CNN
+F 3 "" H 7800 2250 50  0001 C CNN
+	1    7800 2250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7800 2250 8350 2250
+NoConn ~ 12950 2350
+NoConn ~ 11650 2150
+NoConn ~ 8350 1950
+NoConn ~ 8350 2150
+NoConn ~ 9650 2450
+Text GLabel 5850 4000 2    50   Input ~ 0
+Pail_Sensor
+Text GLabel 8350 2350 0    50   Input ~ 0
+Pail_Sensor
+$Comp
+L power:GND #PWR?
+U 1 1 5FC3BF0D
+P 5750 6950
+AR Path="/5ED93B63/5FC3BF0D" Ref="#PWR?"  Part="1" 
+AR Path="/5FC3BF0D" Ref="#PWR0107"  Part="1" 
+AR Path="/5F592B30/5FC3BF0D" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0107" H 5750 6700 50  0001 C CNN
+F 1 "GND" H 5750 6800 50  0000 C CNN
+F 2 "" H 5750 6950 50  0001 C CNN
+F 3 "" H 5750 6950 50  0001 C CNN
+	1    5750 6950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 6500 5350 6500
+$Comp
+L Device:R_Small R?
+U 1 1 5FC3BF19
+P 5350 6700
+AR Path="/5ED93B63/5FC3BF19" Ref="R?"  Part="1" 
+AR Path="/5FC3BF19" Ref="R56"  Part="1" 
+AR Path="/5F592B30/5FC3BF19" Ref="R?"  Part="1" 
+F 0 "R56" H 5409 6746 50  0000 L CNN
+F 1 "100k" H 5409 6655 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5350 6700 50  0001 C CNN
+F 3 "https://media.digikey.com/pdf/PCNs/Stackpole/Global%20Part%20Number%20Change.pdf" H 5350 6700 50  0001 C CNN
+F 4 "~" H -3300 4400 50  0001 C CNN "Alt Vendor"
+F 5 "~" H -3300 4400 50  0001 C CNN "Alt Vendor P/N"
+F 6 "RMCF0805JT100K" H -3300 4400 50  0001 C CNN "MPN"
+F 7 "DigiKey" H -3300 4400 50  0001 C CNN "Vendor"
+F 8 "RMCF0805JT100KCT-ND" H -3300 4400 50  0001 C CNN "Vendor P/N"
+	1    5350 6700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 6600 5350 6500
+Connection ~ 5350 6500
+Wire Wire Line
+	5350 6500 5250 6500
+Wire Wire Line
+	5350 6800 5350 6900
+Wire Wire Line
+	5350 6900 5750 6900
+Wire Wire Line
+	5750 6900 5750 6950
+Wire Wire Line
+	5750 6700 5750 6900
+Connection ~ 5750 6900
+$Comp
+L Device:LED_ALT D?
+U 1 1 5FC3BF2C
+P 5750 6050
+AR Path="/5ED93B63/5FC3BF2C" Ref="D?"  Part="1" 
+AR Path="/5FC3BF2C" Ref="D18"  Part="1" 
+AR Path="/5F592B30/5FC3BF2C" Ref="D?"  Part="1" 
+F 0 "D18" V 5750 6200 50  0000 C CNN
+F 1 "Horn" V 5750 5850 50  0000 C CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5750 6050 50  0001 C CNN
+F 3 "https://katalog.we-online.de/led/datasheet/150080GS75000.pdf" H 5750 6050 50  0001 C CNN
+F 4 "~" H -8950 5050 50  0001 C CNN "Alt Vendor"
+F 5 "~" H -8950 5050 50  0001 C CNN "Alt Vendor P/N"
+F 6 "150080GS75000" H -8950 5050 50  0001 C CNN "MPN"
+F 7 "DigiKey" H -8950 5050 50  0001 C CNN "Vendor"
+F 8 "732-4983-1-ND" H -8950 5050 50  0001 C CNN "Vendor P/N"
+	1    5750 6050
+	0    -1   -1   0   
+$EndComp
+Text GLabel 5250 6500 0    50   Input ~ 0
+Horn_EN
+Wire Wire Line
+	5750 6200 5750 6250
+$Comp
+L Device:Q_NMOS_GSD Q?
+U 1 1 5FC3BF39
+P 5650 6500
+AR Path="/5ED93B63/5FC3BF39" Ref="Q?"  Part="1" 
+AR Path="/5FC3BF39" Ref="Q15"  Part="1" 
+AR Path="/5F592B30/5FC3BF39" Ref="Q?"  Part="1" 
+F 0 "Q15" H 5855 6546 50  0000 L CNN
+F 1 "Q_NMOS_GSD" H 5855 6455 50  0001 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5850 6600 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ds31787.pdf" H 5650 6500 50  0001 C CNN
+F 4 "DMN3404L-7" H 5650 6500 50  0001 C CNN "MPN"
+F 5 "DigiKey" H 5650 6500 50  0001 C CNN "Vendor"
+F 6 "DMN3404LDITR-ND" H 5650 6500 50  0001 C CNN "Vendor P/N"
+F 7 "~" H -3450 4400 50  0001 C CNN "Alt Vendor"
+F 8 "~" H -3450 4400 50  0001 C CNN "Alt Vendor P/N"
+	1    5650 6500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 5850 5750 5900
+Connection ~ 5750 6250
+Wire Wire Line
+	5750 6250 5750 6300
+$Comp
+L Device:R_Small R?
+U 1 1 5FC3BF49
+P 5750 5750
+AR Path="/5ED93B63/5C3B107B/5FC3BF49" Ref="R?"  Part="1" 
+AR Path="/5FC3BF49" Ref="R57"  Part="1" 
+AR Path="/5F592B30/5FC3BF49" Ref="R?"  Part="1" 
+F 0 "R57" H 5809 5796 50  0000 L CNN
+F 1 "4.7k" H 5809 5705 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5750 5750 50  0001 C CNN
+F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C328.pdf" H 5750 5750 50  0001 C CNN
+F 4 "~" H -3450 -2400 50  0001 C CNN "Alt Vendor"
+F 5 "~" H -3450 -2400 50  0001 C CNN "Alt Vendor P/N"
+F 6 "RMCF0805JT4K70" H -3450 -2400 50  0001 C CNN "MPN"
+F 7 "DigiKey" H -3450 -2400 50  0001 C CNN "Vendor"
+F 8 "RMCF0805JT4K70CT-ND" H -3450 -2400 50  0001 C CNN "Vendor P/N"
+	1    5750 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR0106
+U 1 1 5FC667E2
+P 5400 5500
+F 0 "#PWR0106" H 5400 5350 50  0001 C CNN
+F 1 "+12V" H 5400 5640 50  0000 C CNN
+F 2 "" H 5400 5500 50  0001 C CNN
+F 3 "" H 5400 5500 50  0001 C CNN
+	1    5400 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 6250 5750 6250
+Wire Wire Line
+	5300 6150 5400 6150
+Wire Wire Line
+	5400 5500 5400 5550
+Wire Wire Line
+	5400 5550 5750 5550
+Wire Wire Line
+	5750 5550 5750 5650
+Connection ~ 5400 5550
+Wire Wire Line
+	5400 5550 5400 6150
+$Comp
+L power:GND #PWR0108
+U 1 1 5FE5C993
+P 13450 5700
+F 0 "#PWR0108" H 13450 5450 50  0001 C CNN
+F 1 "GND" H 13450 5550 50  0000 C CNN
+F 2 "" H 13450 5700 50  0001 C CNN
+F 3 "" H 13450 5700 50  0001 C CNN
+	1    13450 5700
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 5FE5DBDC
+P 13300 6500
+F 0 "#PWR0109" H 13300 6250 50  0001 C CNN
+F 1 "GND" H 13300 6350 50  0000 C CNN
+F 2 "" H 13300 6500 50  0001 C CNN
+F 3 "" H 13300 6500 50  0001 C CNN
+	1    13300 6500
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0110
+U 1 1 5FE5DFE5
+P 14550 6500
+F 0 "#PWR0110" H 14550 6250 50  0001 C CNN
+F 1 "GND" H 14550 6350 50  0000 C CNN
+F 2 "" H 14550 6500 50  0001 C CNN
+F 3 "" H 14550 6500 50  0001 C CNN
+	1    14550 6500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+12V #PWR0111
+U 1 1 5FE5E43A
+P 13300 5800
+F 0 "#PWR0111" H 13300 5650 50  0001 C CNN
+F 1 "+12V" H 13300 5940 50  0000 C CNN
+F 2 "" H 13300 5800 50  0001 C CNN
+F 3 "" H 13300 5800 50  0001 C CNN
+	1    13300 5800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+5V #PWR0112
+U 1 1 5FE5F6EF
+P 13450 5900
+F 0 "#PWR0112" H 13450 5750 50  0001 C CNN
+F 1 "+5V" H 13450 6040 50  0000 C CNN
+F 2 "" H 13450 5900 50  0001 C CNN
+F 3 "" H 13450 5900 50  0001 C CNN
+	1    13450 5900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3V3 #PWR0113
+U 1 1 5FE60972
+P 13300 6000
+F 0 "#PWR0113" H 13300 5850 50  0001 C CNN
+F 1 "+3V3" H 13300 6140 50  0000 C CNN
+F 2 "" H 13300 6000 50  0001 C CNN
+F 3 "" H 13300 6000 50  0001 C CNN
+	1    13300 6000
+	0    -1   -1   0   
+$EndComp
+$Sheet
+S 5000 11150 1300 950 
+U 6078FBB0
+F0 "Transfer Pump" 50
+F1 "Transfer Pump.sch" 50
+$EndSheet
+$Sheet
+S 3500 11150 1400 950 
+U 5F9CEF98
+F0 "Power" 50
+F1 "Power.sch" 50
+$EndSheet
+$Sheet
+S 1900 11150 1500 950 
+U 5F592B30
+F0 "Air Management" 50
+F1 "Air Management.sch" 50
+$EndSheet
+$Comp
+L power:GND #PWR05
+U 1 1 5FF0F510
+P 3300 10000
+F 0 "#PWR05" H 3300 9750 50  0001 C CNN
+F 1 "GND" H 3300 9850 50  0000 C CNN
+F 2 "" H 3300 10000 50  0001 C CNN
+F 3 "" H 3300 10000 50  0001 C CNN
+	1    3300 10000
+	1    0    0    -1  
+$EndComp
+Text GLabel 2300 9100 2    50   Input ~ 0
+Liquid_Sensor_Red
+Wire Wire Line
+	1800 10000 1800 9900
+$Comp
+L power:GND #PWR03
+U 1 1 5FC60954
+P 1800 10000
+F 0 "#PWR03" H 1800 9750 50  0001 C CNN
+F 1 "GND" H 1800 9850 50  0000 C CNN
+F 2 "" H 1800 10000 50  0001 C CNN
+F 3 "" H 1800 10000 50  0001 C CNN
+	1    1800 10000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5FB12065
+P 1400 10000
+F 0 "#PWR01" H 1400 9750 50  0001 C CNN
+F 1 "GND" H 1400 9850 50  0000 C CNN
+F 2 "" H 1400 10000 50  0001 C CNN
+F 3 "" H 1400 10000 50  0001 C CNN
+	1    1400 10000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 9000 1650 9000
+Wire Wire Line
+	1650 8700 1650 9000
+Wire Wire Line
+	1250 8700 1650 8700
+Connection ~ 1650 8700
+Wire Wire Line
+	1650 8550 1650 8700
+$Comp
+L Connector:Conn_01x05_Male J10
+U 1 1 5EE126D0
+P 5650 9000
+F 0 "J10" H 5650 9300 50  0000 C CNN
+F 1 "USB_Argon" H 5650 8700 50  0000 C CNN
+F 2 "Connector_JST:JST_XH_B5B-XH-AM_1x05_P2.50mm_Vertical" H 5650 9000 50  0001 C CNN
+F 3 "http://www.jst-mfg.com/product/pdf/eng/eXH.pdf" H 5650 9000 50  0001 C CNN
+F 4 "B5B-XH-AM(LF)(SN)" H 0   0   50  0001 C CNN "MPN"
+F 5 "DigiKey" H 0   0   50  0001 C CNN "Vendor"
+F 6 "455-2239-ND" H 0   0   50  0001 C CNN "Vendor P/N"
+	1    5650 9000
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	7400 9750 7250 9750
+$Comp
+L power:+5V #PWR?
+U 1 1 5EFA2286
+P 7700 9650
+AR Path="/5ED93B63/5EFA2286" Ref="#PWR?"  Part="1" 
+AR Path="/5EFA2286" Ref="#PWR013"  Part="1" 
+F 0 "#PWR013" H 7700 9500 50  0001 C CNN
+F 1 "+5V" H 7700 9790 50  0000 C CNN
+F 2 "" H 7700 9650 50  0001 C CNN
+F 3 "" H 7700 9650 50  0001 C CNN
+	1    7700 9650
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 9750 7700 9750
+$Comp
+L Device:Jumper_NO_Small JP?
+U 1 1 5EFA227A
+P 7500 9750
+AR Path="/5ED93B63/5EFA227A" Ref="JP?"  Part="1" 
+AR Path="/5EFA227A" Ref="JP1"  Part="1" 
+F 0 "JP1" H 7500 9830 50  0000 C CNN
+F 1 "Jumper_NO_Small" H 7700 9900 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 7500 9750 50  0001 C CNN
+F 3 "~" H 7500 9750 50  0001 C CNN
+F 4 "N/A" H 7500 9750 50  0001 C CNN "MPN"
+F 5 "N/A" H 7500 9750 50  0001 C CNN "Vendor"
+F 6 "N/A" H 7500 9750 50  0001 C CNN "Vendor P/N"
+F 7 "N/A" H 7500 9750 50  0001 C CNN "Alt Vendor"
+F 8 "N/A" H 7500 9750 50  0001 C CNN "Alt Vendor P/N"
+F 9 "DNF" H -7250 7200 50  0001 C CNN "Config"
+	1    7500 9750
+	-1   0    0    -1  
+$EndComp
+Text Label 7700 9850 2    60   ~ 0
+USB(+)
+Text Label 7700 9950 2    60   ~ 0
+USB(-)
+Wire Wire Line
+	7700 9950 7250 9950
+Wire Wire Line
+	7700 9850 7250 9850
+NoConn ~ 7250 9650
+Wire Wire Line
+	7400 10050 7250 10050
+Wire Wire Line
+	7400 10150 7400 10050
+$Comp
+L power:GND #PWR?
+U 1 1 5EFA2263
+P 7400 10150
+AR Path="/5ED93B63/5EFA2263" Ref="#PWR?"  Part="1" 
+AR Path="/5EFA2263" Ref="#PWR010"  Part="1" 
+F 0 "#PWR010" H 7400 9900 50  0001 C CNN
+F 1 "GND" H 7400 10000 50  0000 C CNN
+F 2 "" H 7400 10150 50  0001 C CNN
+F 3 "" H 7400 10150 50  0001 C CNN
+	1    7400 10150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x05_Male J9
+U 1 1 5EFA2259
+P 7050 9850
+F 0 "J9" H 7050 10150 50  0000 C CNN
+F 1 "USB_AUX" H 7050 9550 50  0000 C CNN
+F 2 "Connector_JST:JST_XH_B5B-XH-AM_1x05_P2.50mm_Vertical" H 7050 9850 50  0001 C CNN
+F 3 "http://www.jst-mfg.com/product/pdf/eng/eXH.pdf" H 7050 9850 50  0001 C CNN
+F 4 "B5B-XH-AM(LF)(SN)" H 0   0   50  0001 C CNN "MPN"
+F 5 "DigiKey" H 0   0   50  0001 C CNN "Vendor"
+F 6 "455-2239-ND" H 0   0   50  0001 C CNN "Vendor P/N"
+	1    7050 9850
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	6000 9800 5850 9800
+$Comp
+L power:+5V #PWR?
+U 1 1 5EF709FB
+P 6300 9700
+AR Path="/5ED93B63/5EF709FB" Ref="#PWR?"  Part="1" 
+AR Path="/5EF709FB" Ref="#PWR015"  Part="1" 
+F 0 "#PWR015" H 6300 9550 50  0001 C CNN
+F 1 "+5V" H 6300 9840 50  0000 C CNN
+F 2 "" H 6300 9700 50  0001 C CNN
+F 3 "" H 6300 9700 50  0001 C CNN
+	1    6300 9700
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 9800 6300 9800
+$Comp
+L Device:Jumper_NO_Small JP?
+U 1 1 5EF709EF
+P 6100 9800
+AR Path="/5ED93B63/5EF709EF" Ref="JP?"  Part="1" 
+AR Path="/5EF709EF" Ref="JP3"  Part="1" 
+F 0 "JP3" H 6100 9880 50  0000 C CNN
+F 1 "Jumper_NO_Small" H 6300 9950 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 6100 9800 50  0001 C CNN
+F 3 "~" H 6100 9800 50  0001 C CNN
+F 4 "N/A" H 6100 9800 50  0001 C CNN "MPN"
+F 5 "N/A" H 6100 9800 50  0001 C CNN "Vendor"
+F 6 "N/A" H 6100 9800 50  0001 C CNN "Vendor P/N"
+F 7 "N/A" H 6100 9800 50  0001 C CNN "Alt Vendor"
+F 8 "N/A" H 6100 9800 50  0001 C CNN "Alt Vendor P/N"
+F 9 "DNF" H -8650 7250 50  0001 C CNN "Config"
+	1    6100 9800
+	-1   0    0    -1  
+$EndComp
+Text Label 6300 9900 2    60   ~ 0
+USB(+)
+Text Label 6300 10000 2    60   ~ 0
+USB(-)
+Wire Wire Line
+	6300 10000 5850 10000
+Wire Wire Line
+	6300 9900 5850 9900
+NoConn ~ 5850 9700
+Wire Wire Line
+	6000 10100 5850 10100
+Wire Wire Line
+	6000 10200 6000 10100
+$Comp
+L power:GND #PWR?
+U 1 1 5EF709D8
+P 6000 10200
+AR Path="/5ED93B63/5EF709D8" Ref="#PWR?"  Part="1" 
+AR Path="/5EF709D8" Ref="#PWR012"  Part="1" 
+F 0 "#PWR012" H 6000 9950 50  0001 C CNN
+F 1 "GND" H 6000 10050 50  0000 C CNN
+F 2 "" H 6000 10200 50  0001 C CNN
+F 3 "" H 6000 10200 50  0001 C CNN
+	1    6000 10200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x05_Male J11
+U 1 1 5EF709CE
+P 5650 9900
+F 0 "J11" H 5650 10200 50  0000 C CNN
+F 1 "USB_Boron" H 5650 9600 50  0000 C CNN
+F 2 "Connector_JST:JST_XH_B5B-XH-AM_1x05_P2.50mm_Vertical" H 5650 9900 50  0001 C CNN
+F 3 "http://www.jst-mfg.com/product/pdf/eng/eXH.pdf" H 5650 9900 50  0001 C CNN
+F 4 "B5B-XH-AM(LF)(SN)" H 0   0   50  0001 C CNN "MPN"
+F 5 "DigiKey" H 0   0   50  0001 C CNN "Vendor"
+F 6 "455-2239-ND" H 0   0   50  0001 C CNN "Vendor P/N"
+	1    5650 9900
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	6000 8900 5850 8900
+$Comp
+L power:+5V #PWR?
+U 1 1 5EEE9A5D
+P 6300 8800
+AR Path="/5ED93B63/5EEE9A5D" Ref="#PWR?"  Part="1" 
+AR Path="/5EEE9A5D" Ref="#PWR014"  Part="1" 
+F 0 "#PWR014" H 6300 8650 50  0001 C CNN
+F 1 "+5V" H 6300 8940 50  0000 C CNN
+F 2 "" H 6300 8800 50  0001 C CNN
+F 3 "" H 6300 8800 50  0001 C CNN
+	1    6300 8800
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 8900 6300 8900
+$Comp
+L Device:Jumper_NO_Small JP?
+U 1 1 5EEE9A51
+P 6100 8900
+AR Path="/5ED93B63/5EEE9A51" Ref="JP?"  Part="1" 
+AR Path="/5EEE9A51" Ref="JP2"  Part="1" 
+F 0 "JP2" H 6100 8980 50  0000 C CNN
+F 1 "Jumper_NO_Small" H 6300 9050 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 6100 8900 50  0001 C CNN
+F 3 "~" H 6100 8900 50  0001 C CNN
+F 4 "N/A" H 6100 8900 50  0001 C CNN "MPN"
+F 5 "N/A" H 6100 8900 50  0001 C CNN "Vendor"
+F 6 "N/A" H 6100 8900 50  0001 C CNN "Vendor P/N"
+F 7 "N/A" H 6100 8900 50  0001 C CNN "Alt Vendor"
+F 8 "N/A" H 6100 8900 50  0001 C CNN "Alt Vendor P/N"
+F 9 "DNF" H -8650 6350 50  0001 C CNN "Config"
+	1    6100 8900
+	-1   0    0    -1  
+$EndComp
+Text Label 6300 9000 2    60   ~ 0
+USB(+)
+Text Label 6300 9100 2    60   ~ 0
+USB(-)
+Wire Wire Line
+	6300 9100 5850 9100
+Wire Wire Line
+	6300 9000 5850 9000
+NoConn ~ 5850 8800
+Wire Wire Line
+	6000 9200 5850 9200
+Wire Wire Line
+	6000 9300 6000 9200
+$Comp
+L power:GND #PWR?
+U 1 1 5EE3D1BC
+P 6000 9300
+AR Path="/5ED93B63/5EE3D1BC" Ref="#PWR?"  Part="1" 
+AR Path="/5EE3D1BC" Ref="#PWR011"  Part="1" 
+F 0 "#PWR011" H 6000 9050 50  0001 C CNN
+F 1 "GND" H 6000 9150 50  0000 C CNN
+F 2 "" H 6000 9300 50  0001 C CNN
+F 3 "" H 6000 9300 50  0001 C CNN
+	1    6000 9300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED_ALT D?
+U 1 1 5F100D32
+P 3300 9300
+AR Path="/5ED93B63/5F100D32" Ref="D?"  Part="1" 
+AR Path="/5F100D32" Ref="D2"  Part="1" 
+F 0 "D2" V 3300 9200 50  0000 R CNN
+F 1 "LIQ_BLUE" V 3300 9750 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3300 9300 50  0001 C CNN
+F 3 "https://katalog.we-online.de/led/datasheet/150080GS75000.pdf" H 3300 9300 50  0001 C CNN
+F 4 "150080GS75000" H -2150 1550 50  0001 C CNN "MPN"
+F 5 "DigiKey" H -2150 1550 50  0001 C CNN "Vendor"
+F 6 "732-4983-1-ND" H -2150 1550 50  0001 C CNN "Vendor P/N"
+F 7 "~" H -2150 1550 50  0001 C CNN "Alt Vendor"
+F 8 "~" H -2150 1550 50  0001 C CNN "Alt Vendor P/N"
+	1    3300 9300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5F100D57
+P 3300 9000
+AR Path="/5ED93B63/5F100D57" Ref="R?"  Part="1" 
+AR Path="/5F100D57" Ref="R4"  Part="1" 
+F 0 "R4" H 3359 9046 50  0000 L CNN
+F 1 "4.7K" H 3359 8955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3300 9000 50  0001 C CNN
+F 3 "https://media.digikey.com/pdf/PCNs/Stackpole/Global%20Part%20Number%20Change.pdf" H 3300 9000 50  0001 C CNN
+F 4 "RMCF0805JT4K70" H 3300 9000 50  0001 C CNN "MPN"
+F 5 "DigiKey" H -1600 2800 50  0001 C CNN "Vendor"
+F 6 "RMCF0805JT4K70CT-ND" H 3300 9000 50  0001 C CNN "Vendor P/N"
+F 7 "~" H -1600 2800 50  0001 C CNN "Alt Vendor"
+F 8 "~" H -1600 2800 50  0001 C CNN "Alt Vendor P/N"
+	1    3300 9000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5F100D6D
+P 3500 8800
+AR Path="/5C2E7DBE/5F100D6D" Ref="R?"  Part="1" 
+AR Path="/5F100D6D" Ref="R5"  Part="1" 
+AR Path="/5ED93B63/5F100D6D" Ref="R?"  Part="1" 
+F 0 "R5" V 3550 8800 50  0000 C TNN
+F 1 "10K" V 3400 8800 50  0000 C TNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3500 8800 50  0001 C CNN
+F 3 "https://www.seielect.com/Catalog/SEI-rncp.pdf" H 3500 8800 50  0001 C CNN
+F 4 "DigiKey" H -1900 7650 50  0001 C CNN "Vendor"
+F 5 "~" H -1900 7650 50  0001 C CNN "Alt Vendor"
+F 6 "~" H -1900 7650 50  0001 C CNN "Alt Vendor P/N"
+F 7 "RMCF0805JG10K0" H -950 3850 50  0001 C CNN "MPN"
+F 8 "RMCF0805JG10K0CT-ND" H -950 3850 50  0001 C CNN "Vendor P/N"
+	1    3500 8800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5F100D78
+P 3700 9000
+AR Path="/5ED93B63/5F100D78" Ref="R?"  Part="1" 
+AR Path="/5F100D78" Ref="R6"  Part="1" 
+F 0 "R6" H 3759 9046 50  0000 L CNN
+F 1 "1.5K" H 3759 8955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3700 9000 50  0001 C CNN
+F 3 "https://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf" H 3700 9000 50  0001 C CNN
+F 4 "RMCF0805JT1K50" H 3700 9000 50  0001 C CNN "MPN"
+F 5 "DigiKey" H -1200 2800 50  0001 C CNN "Vendor"
+F 6 "RMCF0805JT1K50CT-ND" H 3700 9000 50  0001 C CNN "Vendor P/N"
+F 7 "~" H -1200 2800 50  0001 C CNN "Alt Vendor"
+F 8 "~" H -1200 2800 50  0001 C CNN "Alt Vendor P/N"
+	1    3700 9000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 8900 3300 8800
+Wire Wire Line
+	3300 9150 3300 9100
+Wire Wire Line
+	3600 8800 3700 8800
+Wire Wire Line
+	3700 8800 3700 8900
+Connection ~ 3700 8800
+Wire Wire Line
+	3700 8800 3900 8800
+Wire Wire Line
+	1250 8800 3300 8800
+Wire Wire Line
+	3300 8800 3400 8800
+Connection ~ 3300 8800
+Wire Wire Line
+	3300 10000 3300 9600
+Wire Wire Line
+	3300 9450 3300 9600
+Connection ~ 3300 9600
+Wire Wire Line
+	3300 9600 3700 9600
+Wire Wire Line
+	3700 9100 3700 9600
+NoConn ~ 1100 4050
+$Comp
+L power:+12V #PWR02
+U 1 1 5F48FF40
+P 1650 8550
+F 0 "#PWR02" H 1650 8400 50  0001 C CNN
+F 1 "+12V" H 1650 8690 50  0000 C CNN
+F 2 "" H 1650 8550 50  0001 C CNN
+F 3 "" H 1650 8550 50  0001 C CNN
+	1    1650 8550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 9400 2200 9900
+Wire Wire Line
+	1800 9900 2200 9900
+Connection ~ 1800 9900
+Wire Wire Line
+	1800 9750 1800 9900
+Text Notes 2050 8350 0    125  ~ 0
+Liquid Sensor
+$Comp
+L Device:R_Small R?
+U 1 1 5F100D62
+P 2000 9100
+AR Path="/5C2E7DBE/5F100D62" Ref="R?"  Part="1" 
+AR Path="/5F100D62" Ref="R2"  Part="1" 
+AR Path="/5ED93B63/5F100D62" Ref="R?"  Part="1" 
+F 0 "R2" V 2050 9100 50  0000 C TNN
+F 1 "10K" V 1900 9100 50  0000 C TNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2000 9100 50  0001 C CNN
+F 3 "https://www.seielect.com/Catalog/SEI-rncp.pdf" H 2000 9100 50  0001 C CNN
+F 4 "DigiKey" H -3400 7950 50  0001 C CNN "Vendor"
+F 5 "~" H -3400 7950 50  0001 C CNN "Alt Vendor"
+F 6 "~" H -3400 7950 50  0001 C CNN "Alt Vendor P/N"
+F 7 "RMCF0805JG10K0" H -2450 4150 50  0001 C CNN "MPN"
+F 8 "RMCF0805JG10K0CT-ND" H -2450 4150 50  0001 C CNN "Vendor P/N"
+	1    2000 9100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5F100D25
+P 2200 9300
+AR Path="/5ED93B63/5F100D25" Ref="R?"  Part="1" 
+AR Path="/5F100D25" Ref="R3"  Part="1" 
+F 0 "R3" H 2259 9346 50  0000 L CNN
+F 1 "1.5K" H 2259 9255 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2200 9300 50  0001 C CNN
+F 3 "https://www.seielect.com/Catalog/SEI-RMCF_RMCP.pdf" H 2200 9300 50  0001 C CNN
+F 4 "RMCF0805JT1K50" H 2200 9300 50  0001 C CNN "MPN"
+F 5 "DigiKey" H -2700 3100 50  0001 C CNN "Vendor"
+F 6 "RMCF0805JT1K50CT-ND" H 2200 9300 50  0001 C CNN "Vendor P/N"
+F 7 "~" H -2700 3100 50  0001 C CNN "Alt Vendor"
+F 8 "~" H -2700 3100 50  0001 C CNN "Alt Vendor P/N"
+	1    2200 9300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 9100 2300 9100
+Wire Wire Line
+	2200 9100 2200 9200
+Connection ~ 2200 9100
+Wire Wire Line
+	2100 9100 2200 9100
+Wire Wire Line
+	1800 9450 1800 9400
+Wire Wire Line
+	1250 9100 1800 9100
+Wire Wire Line
+	1800 9100 1900 9100
+Connection ~ 1800 9100
+Wire Wire Line
+	1800 9200 1800 9100
+$Comp
+L Device:R_Small R?
+U 1 1 5F100D0B
+P 1800 9300
+AR Path="/5ED93B63/5F100D0B" Ref="R?"  Part="1" 
+AR Path="/5F100D0B" Ref="R1"  Part="1" 
+F 0 "R1" H 1859 9346 50  0000 L CNN
+F 1 "4.7K" H 1859 9255 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1800 9300 50  0001 C CNN
+F 3 "https://media.digikey.com/pdf/PCNs/Stackpole/Global%20Part%20Number%20Change.pdf" H 1800 9300 50  0001 C CNN
+F 4 "RMCF0805JT4K70" H 1800 9300 50  0001 C CNN "MPN"
+F 5 "DigiKey" H -3100 3100 50  0001 C CNN "Vendor"
+F 6 "RMCF0805JT4K70CT-ND" H 1800 9300 50  0001 C CNN "Vendor P/N"
+F 7 "~" H -3100 3100 50  0001 C CNN "Alt Vendor"
+F 8 "~" H -3100 3100 50  0001 C CNN "Alt Vendor P/N"
+	1    1800 9300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED_ALT D?
+U 1 1 5F100D00
+P 1800 9600
+AR Path="/5ED93B63/5F100D00" Ref="D?"  Part="1" 
+AR Path="/5F100D00" Ref="D1"  Part="1" 
+F 0 "D1" V 1800 9500 50  0000 R CNN
+F 1 "LIQ_RED" V 1800 9950 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1800 9600 50  0001 C CNN
+F 3 "https://katalog.we-online.de/led/datasheet/150080GS75000.pdf" H 1800 9600 50  0001 C CNN
+F 4 "150080GS75000" H -3600 3250 50  0001 C CNN "MPN"
+F 5 "DigiKey" H -3600 3250 50  0001 C CNN "Vendor"
+F 6 "732-4983-1-ND" H -3600 3250 50  0001 C CNN "Vendor P/N"
+F 7 "~" H -3600 3250 50  0001 C CNN "Alt Vendor"
+F 8 "~" H -3600 3250 50  0001 C CNN "Alt Vendor P/N"
+	1    1800 9600
+	0    -1   -1   0   
+$EndComp
+Text Notes 1350 3300 0    125  ~ 0
+Air Pressure
+$Comp
+L Device:C_Small C?
+U 1 1 5F05071F
+P 2950 4050
+AR Path="/5ED93B63/5F05071F" Ref="C?"  Part="1" 
+AR Path="/5F05071F" Ref="C1"  Part="1" 
+F 0 "C1" H 3050 4000 50  0000 L CNN
+F 1 "0.1uF" H 3050 4100 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2950 4050 50  0001 C CNN
+F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL21B104KCFWPNE.jsp" H 2950 4050 50  0001 C CNN
+F 4 "~" H -3750 600 50  0001 C CNN "Alt Vendor"
+F 5 "~" H -3750 600 50  0001 C CNN "Alt Vendor P/N"
+F 6 "CL21B104KCFWPNE" H -3750 600 50  0001 C CNN "MPN"
+F 7 "DigiKey" H -3750 600 50  0001 C CNN "Vendor"
+F 8 "1276-6733-1-ND" H -3750 600 50  0001 C CNN "Vendor P/N"
+	1    2950 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5F050714
+P 2300 3600
+AR Path="/5ED93B63/5F050714" Ref="#PWR?"  Part="1" 
+AR Path="/5F050714" Ref="#PWR06"  Part="1" 
+F 0 "#PWR06" H 2300 3450 50  0001 C CNN
+F 1 "+5V" H 2300 3740 50  0000 C CNN
+F 2 "" H 2300 3600 50  0001 C CNN
+F 3 "" H 2300 3600 50  0001 C CNN
+	1    2300 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 3900 2950 3950
+Connection ~ 3350 3900
+Wire Wire Line
+	2950 3900 3350 3900
+Wire Wire Line
+	3350 4200 2950 4200
+Wire Wire Line
+	2950 4150 2950 4200
+$Comp
+L Device:R_Small R?
+U 1 1 5F0506FB
+P 2750 3900
+AR Path="/5ED93B63/5F0506FB" Ref="R?"  Part="1" 
+AR Path="/5F0506FB" Ref="R7"  Part="1" 
+F 0 "R7" V 2850 3850 50  0000 L CNN
+F 1 "2.2k 0.5%" V 2650 3700 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2750 3900 50  0001 C CNN
+F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C328.pdf" H 2750 3900 50  0001 C CNN
+F 4 "ERJ-PB6D2201V" H 600 -4800 50  0001 C CNN "MPN"
+F 5 "DigiKey" H 600 -4800 50  0001 C CNN "Vendor"
+F 6 "P21055CT-ND" H 600 -4800 50  0001 C CNN "Vendor P/N"
+F 7 "~" H 600 -4800 50  0001 C CNN "Alt Vendor"
+F 8 "~" H 600 -4800 50  0001 C CNN "Alt Vendor P/N"
+	1    2750 3900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2300 3800 2300 3600
+Wire Wire Line
+	2150 3800 2300 3800
+$Comp
+L VDW_Modules:HSCDX U1
+U 1 1 5ED78C6C
+P 1600 4050
+F 0 "U1" H 1600 4650 60  0000 C CNN
+F 1 "Pressure Red" H 1600 4550 60  0000 C CNN
+F 2 "VDW-Modules:HoneyWell_DIP_AN" H 1600 4100 60  0001 C CNN
+F 3 "https://sensing.honeywell.com/index.php?ci_id=151133" H 1600 4100 60  0001 C CNN
+F 4 "HSCDANN005PGAA5" H 0   0   50  0001 C CNN "MPN"
+F 5 "DigiKey" H 0   0   50  0001 C CNN "Vendor"
+F 6 "480-6588-ND" H 0   0   50  0001 C CNN "Vendor P/N"
+	1    1600 4050
+	-1   0    0    -1  
+$EndComp
+Text GLabel 3900 8800 2    50   Input ~ 0
+Liquid_Sensor_Blue
+Wire Wire Line
+	1250 8900 1400 8900
+Wire Wire Line
+	1400 9200 1400 8900
+Wire Wire Line
+	1400 10000 1400 9200
+Connection ~ 1400 9200
+Wire Wire Line
+	1250 9200 1400 9200
+$Comp
+L Connector:Conn_01x06_Male J1
+U 1 1 5ED90400
+P 1050 9000
+F 0 "J1" H 1050 9350 50  0000 C CNN
+F 1 "Sensors" H 1050 8600 50  0000 C CNN
+F 2 "Connector_JST:JST_XH_B6B-XH-AM_1x06_P2.50mm_Vertical" H 1050 9000 50  0001 C CNN
+F 3 "http://www.jst-mfg.com/product/pdf/eng/eXH.pdf" H 1050 9000 50  0001 C CNN
+F 4 "B6B-XH-AM(LF)(SN)" H 0   0   50  0001 C CNN "MPN"
+F 5 "DigiKey" H 0   0   50  0001 C CNN "Vendor"
+F 6 "455-2238-ND" H 0   0   50  0001 C CNN "Vendor P/N"
+	1    1050 9000
+	1    0    0    1   
+$EndComp
+Text GLabel 11650 2950 0    50   Input ~ 0
+SCK
+Text GLabel 11650 3050 0    50   Input ~ 0
+MOSI
+Text GLabel 11650 3150 0    50   Input ~ 0
+MISO
+$Sheet
+S 6400 11150 1250 950 
+U 5EE2ECA3
+F0 "Steppers" 50
+F1 "Steppers.sch" 50
+$EndSheet
+Text GLabel 11650 1950 0    50   Input ~ 0
+I2C_RESET
+Text GLabel 12950 3450 2    50   Input ~ 0
+SDA
+Text GLabel 12950 3350 2    50   Input ~ 0
+SCL
+Text GLabel 12950 2950 2    50   Input ~ 0
+Red_STATUS_LV
+Text GLabel 12950 2850 2    50   Input ~ 0
+Red_STEP_LV
+Text GLabel 12950 2750 2    50   Input ~ 0
+Red_DIR_LV
+Text GLabel 12950 2650 2    50   Input ~ 0
+Red_EN_LV
+Text GLabel 11650 2850 0    50   Input ~ 0
+Blue_STATUS_LV
+Text GLabel 12950 3250 2    50   Input ~ 0
+Blue_STEP_LV
+Text GLabel 12950 3150 2    50   Input ~ 0
+Blue_DIR_LV
+Text GLabel 12950 3050 2    50   Input ~ 0
+Blue_EN_LV
+Text GLabel 11650 2750 0    50   Input ~ 0
+CoBlend_STATUS_LV
+Text GLabel 11650 2650 0    50   Input ~ 0
+CoBlend_STEP_LV
+Text GLabel 11650 2550 0    50   Input ~ 0
+CoBlend_DIR_LV
+Text GLabel 11650 2450 0    50   Input ~ 0
+CoBlend_EN_LV
+NoConn ~ 11650 2350
+$Comp
+L MCU_Particle-VDW:Argon U5
+U 1 1 601EF3F8
+P 12300 2800
+F 0 "U5" H 12400 2000 50  0000 C CNN
+F 1 "Argon" H 12050 2000 50  0000 C CNN
+F 2 "VDW-Particle:Argon_Boron_Xenon" H 12300 2800 50  0001 C CNN
+F 3 "https://docs.particle.io/assets/pdfs/datasheets/argon-datasheet.pdf" H 12300 2800 50  0001 C CNN
+F 4 "ARGN-H" H 0   0   50  0001 C CNN "MPN"
+F 5 "DigiKey" H 0   0   50  0001 C CNN "Vendor"
+F 6 "1878-1022-ND" H 0   0   50  0001 C CNN "Vendor P/N"
+	1    12300 2800
+	1    0    0    -1  
+$EndComp
+NoConn ~ 12950 2450
+Wire Wire Line
+	14150 6500 14550 6500
+Text GLabel 9650 3450 2    50   Input ~ 0
+SDA
+Text GLabel 9650 3350 2    50   Input ~ 0
+SCL
+Text GLabel 9650 2650 2    50   Input ~ 0
+Horn_EN
+Text GLabel 9650 2750 2    50   Input ~ 0
+AUX_PWM
+Text GLabel 14150 6100 2    50   Input ~ 0
+AUX_RX
+Text GLabel 14150 6200 2    50   Input ~ 0
+AUX_TX
+Text GLabel 9650 3150 2    50   Input ~ 0
+IO_2_INT
+Text GLabel 9650 3250 2    50   Input ~ 0
+IO_INT
+Text GLabel 9650 2950 2    50   Input ~ 0
+Transfer_Blue_Reserved
+Text GLabel 9650 2850 2    50   Input ~ 0
+Transfer_Red_Reserved
+Text GLabel 3600 3900 2    50   Input ~ 0
+Pressure_Red
+Text GLabel 3600 6200 2    50   Input ~ 0
+Pressure_Blue
+Text GLabel 8350 2450 0    50   Input ~ 0
+Pressure_Red
+Text GLabel 8350 2550 0    50   Input ~ 0
+Pressure_Blue
+$Sheet
+S 7750 11150 1250 950 
+U 5F7FD3CE
+F0 "I2C" 50
+F1 "I2C.sch" 50
+$EndSheet
+Text Notes 5050 5250 0    125  ~ 0
+Horn
+$Comp
+L Connector:Micro_SD_Card_Det J20
+U 1 1 5F870512
+P 9000 5950
+F 0 "J20" H 8350 6650 50  0000 C CNN
+F 1 "Log" H 9650 6650 50  0000 R CNN
+F 2 "Connector_Card:microSD_HC_Hirose_DM3D-SF" H 11050 6650 50  0001 C CNN
+F 3 "https://www.hirose.com/product/en/download_file/key_name/DM3/category/Catalog/doc_file_id/49662/?file_category_id=4&item_id=195&is_series=1" H 9000 6050 50  0001 C CNN
+F 4 "DM3D-SF" H 9000 5950 50  0001 C CNN "MPN"
+F 5 "DigiKey" H 9000 5950 50  0001 C CNN "Vendor"
+F 6 "HR1941CT-ND" H 9000 5950 50  0001 C CNN "Vendor P/N"
+	1    9000 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5EE18CEE
+P 10750 9350
+AR Path="/5ED93B63/5EE18CEE" Ref="C?"  Part="1" 
+AR Path="/5EE18CEE" Ref="C9"  Part="1" 
+F 0 "C9" H 10850 9300 50  0000 L CNN
+F 1 "0.1uF" H 10850 9400 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 10750 9350 50  0001 C CNN
+F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL21B104KCFWPNE.jsp" H 10750 9350 50  0001 C CNN
+F 4 "CL21B104KCFWPNE" H 4050 5900 50  0001 C CNN "MPN"
+F 5 "DigiKey" H 4050 5900 50  0001 C CNN "Vendor"
+F 6 "1276-6733-1-ND" H 4050 5900 50  0001 C CNN "Vendor P/N"
+F 7 "~" H 4050 5900 50  0001 C CNN "Alt Vendor"
+F 8 "~" H 4050 5900 50  0001 C CNN "Alt Vendor P/N"
+	1    10750 9350
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	10750 9250 10750 9200
+Connection ~ 10750 9200
+Wire Wire Line
+	10750 9200 10850 9200
+Wire Wire Line
+	10200 9500 10750 9500
+Wire Wire Line
+	10750 9500 10750 9450
+Wire Wire Line
+	10200 9500 10200 9550
+$Comp
+L power:GNDA #PWR?
+U 1 1 5EE18D00
+P 10200 9550
+AR Path="/5ED93B63/5EE18D00" Ref="#PWR?"  Part="1" 
+AR Path="/5EE18D00" Ref="#PWR0155"  Part="1" 
+F 0 "#PWR0155" H 10200 9300 50  0001 C CNN
+F 1 "GNDA" H 10200 9400 50  0000 C CNN
+F 2 "" H 10200 9550 50  0001 C CNN
+F 3 "" H 10200 9550 50  0001 C CNN
+	1    10200 9550
+	1    0    0    -1  
+$EndComp
+Text Notes 9350 8450 0    125  ~ 0
+Ambient Tempereture Sensor
+$Comp
+L Connector:Conn_01x02_Male J21
+U 1 1 5EE18D17
+P 9600 9200
+F 0 "J21" H 9600 9400 50  0000 C CNN
+F 1 "Ambient Temperature" H 9450 9000 50  0000 C CNN
+F 2 "Connector_JST:JST_XH_B2B-XH-AM_1x02_P2.50mm_Vertical" H 9600 9200 50  0001 C CNN
+F 3 "http://www.jst-mfg.com/product/pdf/eng/eXH.pdf" H 9600 9200 50  0001 C CNN
+F 4 "B2B-XH-A(LF)(SN)" H 0   0   50  0001 C CNN "MPN"
+F 5 "DigiKey" H 0   0   50  0001 C CNN "Vendor"
+F 6 "455-2247-ND" H 0   0   50  0001 C CNN "Vendor P/N"
+	1    9600 9200
+	1    0    0    1   
+$EndComp
+Text GLabel 10950 9200 2    50   Input ~ 0
+Ambient_Temperature
+$Comp
+L power:+3V3 #PWR0156
+U 1 1 5EE29B55
+P 10200 8650
+F 0 "#PWR0156" H 10200 8500 50  0001 C CNN
+F 1 "+3V3" H 10200 8790 50  0000 C CNN
+F 2 "" H 10200 8650 50  0001 C CNN
+F 3 "" H 10200 8650 50  0001 C CNN
+	1    10200 8650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5EE2BF0E
+P 10200 9350
+AR Path="/5ED93B63/5EE2BF0E" Ref="R?"  Part="1" 
+AR Path="/5EE2BF0E" Ref="R25"  Part="1" 
+F 0 "R25" H 10259 9396 50  0000 L CNN
+F 1 "4.7k 0.5%" H 10259 9305 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 10200 9350 50  0001 C CNN
+F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C328.pdf" H 10200 9350 50  0001 C CNN
+F 4 "ERJ-PB6D4701V" H 8050 350 50  0001 C CNN "MPN"
+F 5 "DigiKey" H 8050 350 50  0001 C CNN "Vendor"
+F 6 "P21095CT-ND" H 8050 350 50  0001 C CNN "Vendor P/N"
+F 7 "~" H 8050 350 50  0001 C CNN "Alt Vendor"
+F 8 "~" H 8050 350 50  0001 C CNN "Alt Vendor P/N"
+	1    10200 9350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10200 9250 10200 9200
+Wire Wire Line
+	10200 9200 10750 9200
+Wire Wire Line
+	10200 9450 10200 9500
+Connection ~ 10200 9500
+$Comp
+L Device:Thermistor_NTC TH1
+U 1 1 5EE574A0
+P 10200 9000
+F 0 "TH1" H 10025 9000 50  0000 C CNN
+F 1 "4.7k NTC" H 10450 9000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 10200 9050 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/29044/ntcs0805e3t.pdf" H 10200 9050 50  0001 C CNN
+F 4 "NTCS0805E3472FMT" H 10200 9000 50  0001 C CNN "MPN"
+F 5 "DigiKey" H 10200 9000 50  0001 C CNN "Vendor"
+F 6 "BC2576CT-ND" H 10200 9000 50  0001 C CNN "Vendor P/N"
+	1    10200 9000
+	1    0    0    -1  
+$EndComp
+Connection ~ 10200 8800
+Wire Wire Line
+	10200 8650 10200 8800
+Wire Wire Line
+	10200 8850 10200 8800
+Wire Wire Line
+	10200 9150 10200 9200
+Connection ~ 10200 9200
+Wire Wire Line
+	9800 9200 10200 9200
+Wire Wire Line
+	9800 9100 9900 9100
+Wire Wire Line
+	9900 9100 9900 8800
+Wire Wire Line
+	9900 8800 10200 8800
+Text Notes 10250 8800 0    50   ~ 0
+Do not place if \nusing connector sensor
+Text GLabel 8350 2650 0    50   Input ~ 0
+Ambient_Temperature
+$Comp
+L power:GND #PWR0157
+U 1 1 5F04FCF6
+P 9950 6700
+F 0 "#PWR0157" H 9950 6450 50  0001 C CNN
+F 1 "GND" H 9950 6550 50  0000 C CNN
+F 2 "" H 9950 6700 50  0001 C CNN
+F 3 "" H 9950 6700 50  0001 C CNN
+	1    9950 6700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9950 6700 9950 6450
+Wire Wire Line
+	9950 6450 9800 6450
+NoConn ~ 8100 5550
+NoConn ~ 8100 6250
+Text GLabel 8100 5950 0    50   Input ~ 0
+SCK
+Text GLabel 8100 5750 0    50   Input ~ 0
+MOSI
+Text GLabel 8100 6150 0    50   Input ~ 0
+MISO
+$Comp
+L power:+3V3 #PWR0158
+U 1 1 5F08B0FB
+P 7300 5800
+F 0 "#PWR0158" H 7300 5650 50  0001 C CNN
+F 1 "+3V3" H 7300 5940 50  0000 C CNN
+F 2 "" H 7300 5800 50  0001 C CNN
+F 3 "" H 7300 5800 50  0001 C CNN
+	1    7300 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7300 5800 7300 5850
+Wire Wire Line
+	7300 5850 8100 5850
+$Comp
+L power:GND #PWR0159
+U 1 1 5F09AE7D
+P 7300 6600
+F 0 "#PWR0159" H 7300 6350 50  0001 C CNN
+F 1 "GND" H 7300 6450 50  0000 C CNN
+F 2 "" H 7300 6600 50  0001 C CNN
+F 3 "" H 7300 6600 50  0001 C CNN
+	1    7300 6600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8100 6450 7300 6450
+Wire Wire Line
+	7300 6450 7300 6600
+Wire Wire Line
+	8100 6050 7300 6050
+Wire Wire Line
+	7300 6050 7300 6450
+Connection ~ 7300 6450
+Text GLabel 7950 6350 0    50   Input ~ 0
+SD_DET
+NoConn ~ 2150 3700
+NoConn ~ 2150 4100
+$Comp
+L VDW_Modules:HSCSX U2
+U 1 1 5F193091
+P 1600 5000
+F 0 "U2" H 1600 5400 60  0000 C CNN
+F 1 "Pressure Red" H 1600 5300 60  0000 C CNN
+F 2 "VDW-Modules:HoneyWell_SIP_NB" H 1500 5050 60  0001 C CNN
+F 3 "https://sensing.honeywell.com/index.php?ci_id=151133" H 1500 5050 60  0001 C CNN
+F 4 "HSCSNBN005PGAA5" H 1600 5000 50  0001 C CNN "MPN"
+F 5 "DigiKey" H 1600 5000 50  0001 C CNN "Vendor"
+F 6 "HSCSNBN005PGAA5-ND" H 1600 5000 50  0001 C CNN "Vendor P/N"
+F 7 "DNF" H 0   0   50  0001 C CNN "Config"
+	1    1600 5000
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 3800 2300 4950
+Wire Wire Line
+	2300 4950 2150 4950
+Connection ~ 2300 3800
+NoConn ~ 2150 4850
+$Comp
+L power:GNDA #PWR?
+U 1 1 5F205647
+P 2400 5300
+AR Path="/5ED93B63/5F205647" Ref="#PWR?"  Part="1" 
+AR Path="/5F205647" Ref="#PWR0160"  Part="1" 
+F 0 "#PWR0160" H 2400 5050 50  0001 C CNN
+F 1 "GNDA" H 2400 5150 50  0000 C CNN
+F 2 "" H 2400 5300 50  0001 C CNN
+F 3 "" H 2400 5300 50  0001 C CNN
+	1    2400 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 5300 2400 5150
+Wire Wire Line
+	2400 5150 2150 5150
+Wire Wire Line
+	2400 5150 2400 4000
+Wire Wire Line
+	2400 4000 2150 4000
+Connection ~ 2400 5150
+Wire Wire Line
+	2850 3900 2950 3900
+Connection ~ 2950 3900
+Wire Wire Line
+	2650 3900 2550 3900
+Wire Wire Line
+	2150 5050 2550 5050
+Wire Wire Line
+	2550 5050 2550 3900
+Connection ~ 2550 3900
+Wire Wire Line
+	2550 3900 2150 3900
+NoConn ~ 1100 5000
+$Comp
+L Device:R_Small R?
+U 1 1 5F2E280F
+P 3350 6350
+AR Path="/5ED93B63/5F2E280F" Ref="R?"  Part="1" 
+AR Path="/5F2E280F" Ref="R10"  Part="1" 
+F 0 "R10" H 3409 6396 50  0000 L CNN
+F 1 "4.7k 0.5%" H 3409 6305 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3350 6350 50  0001 C CNN
+F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C328.pdf" H 3350 6350 50  0001 C CNN
+F 4 "ERJ-PB6D4701V" H 1200 -2650 50  0001 C CNN "MPN"
+F 5 "DigiKey" H 1200 -2650 50  0001 C CNN "Vendor"
+F 6 "P21095CT-ND" H 1200 -2650 50  0001 C CNN "Vendor P/N"
+F 7 "~" H 1200 -2650 50  0001 C CNN "Alt Vendor"
+F 8 "~" H 1200 -2650 50  0001 C CNN "Alt Vendor P/N"
+	1    3350 6350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 6250 3350 6200
+Wire Wire Line
+	3350 6200 3600 6200
+Wire Wire Line
+	3350 6450 3350 6500
+NoConn ~ 1100 6350
+$Comp
+L Device:C_Small C?
+U 1 1 5F2E2822
+P 2950 6350
+AR Path="/5ED93B63/5F2E2822" Ref="C?"  Part="1" 
+AR Path="/5F2E2822" Ref="C2"  Part="1" 
+F 0 "C2" H 3050 6300 50  0000 L CNN
+F 1 "0.1uF" H 3050 6400 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2950 6350 50  0001 C CNN
+F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL21B104KCFWPNE.jsp" H 2950 6350 50  0001 C CNN
+F 4 "~" H -3750 2900 50  0001 C CNN "Alt Vendor"
+F 5 "~" H -3750 2900 50  0001 C CNN "Alt Vendor P/N"
+F 6 "CL21B104KCFWPNE" H -3750 2900 50  0001 C CNN "MPN"
+F 7 "DigiKey" H -3750 2900 50  0001 C CNN "Vendor"
+F 8 "1276-6733-1-ND" H -3750 2900 50  0001 C CNN "Vendor P/N"
+	1    2950 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5F2E282C
+P 2300 5850
+AR Path="/5ED93B63/5F2E282C" Ref="#PWR?"  Part="1" 
+AR Path="/5F2E282C" Ref="#PWR0161"  Part="1" 
+F 0 "#PWR0161" H 2300 5700 50  0001 C CNN
+F 1 "+5V" H 2300 5990 50  0000 C CNN
+F 2 "" H 2300 5850 50  0001 C CNN
+F 3 "" H 2300 5850 50  0001 C CNN
+	1    2300 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 6200 2950 6250
+Connection ~ 3350 6200
+Wire Wire Line
+	2950 6200 3350 6200
+Wire Wire Line
+	3350 6500 2950 6500
+Wire Wire Line
+	2950 6450 2950 6500
+$Comp
+L Device:R_Small R?
+U 1 1 5F2E2840
+P 2750 6200
+AR Path="/5ED93B63/5F2E2840" Ref="R?"  Part="1" 
+AR Path="/5F2E2840" Ref="R8"  Part="1" 
+F 0 "R8" V 2850 6150 50  0000 L CNN
+F 1 "2.2k 0.5%" V 2650 6000 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2750 6200 50  0001 C CNN
+F 3 "https://industrial.panasonic.com/cdbs/www-data/pdf/RDM0000/AOA0000C328.pdf" H 2750 6200 50  0001 C CNN
+F 4 "ERJ-PB6D2201V" H 600 -2500 50  0001 C CNN "MPN"
+F 5 "DigiKey" H 600 -2500 50  0001 C CNN "Vendor"
+F 6 "P21055CT-ND" H 600 -2500 50  0001 C CNN "Vendor P/N"
+F 7 "~" H 600 -2500 50  0001 C CNN "Alt Vendor"
+F 8 "~" H 600 -2500 50  0001 C CNN "Alt Vendor P/N"
+	1    2750 6200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2300 6100 2300 5850
+Wire Wire Line
+	2150 6100 2300 6100
+$Comp
+L VDW_Modules:HSCDX U12
+U 1 1 5F2E284C
+P 1600 6350
+F 0 "U12" H 1600 6950 60  0000 C CNN
+F 1 "Pressure Blue" H 1600 6850 60  0000 C CNN
+F 2 "VDW-Modules:HoneyWell_DIP_AN" H 1600 6400 60  0001 C CNN
+F 3 "https://sensing.honeywell.com/index.php?ci_id=151133" H 1600 6400 60  0001 C CNN
+F 4 "HSCDANN005PGAA5" H 0   0   50  0001 C CNN "MPN"
+F 5 "DigiKey" H 0   0   50  0001 C CNN "Vendor"
+F 6 "480-6588-ND" H 0   0   50  0001 C CNN "Vendor P/N"
+	1    1600 6350
+	-1   0    0    -1  
+$EndComp
+NoConn ~ 2150 6000
+NoConn ~ 2150 6400
+Wire Wire Line
+	2300 6100 2300 7250
+Wire Wire Line
+	2300 7250 2150 7250
+Connection ~ 2300 6100
+NoConn ~ 2150 7150
+$Comp
+L power:GNDA #PWR?
+U 1 1 5F2E2866
+P 2400 7600
+AR Path="/5ED93B63/5F2E2866" Ref="#PWR?"  Part="1" 
+AR Path="/5F2E2866" Ref="#PWR0162"  Part="1" 
+F 0 "#PWR0162" H 2400 7350 50  0001 C CNN
+F 1 "GNDA" H 2400 7450 50  0000 C CNN
+F 2 "" H 2400 7600 50  0001 C CNN
+F 3 "" H 2400 7600 50  0001 C CNN
+	1    2400 7600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 7600 2400 7450
+Wire Wire Line
+	2400 7450 2150 7450
+Wire Wire Line
+	2400 7450 2400 6300
+Wire Wire Line
+	2400 6300 2150 6300
+Connection ~ 2400 7450
+Wire Wire Line
+	2850 6200 2950 6200
+Connection ~ 2950 6200
+Wire Wire Line
+	2650 6200 2550 6200
+Wire Wire Line
+	2150 7350 2550 7350
+Wire Wire Line
+	2550 7350 2550 6200
+Connection ~ 2550 6200
+Wire Wire Line
+	2550 6200 2150 6200
+NoConn ~ 1100 7300
+Wire Wire Line
+	2400 5150 2950 5150
+Wire Wire Line
+	2950 5150 2950 4200
+Connection ~ 2950 4200
+Wire Wire Line
+	2400 7450 2950 7450
+Wire Wire Line
+	2950 7450 2950 6500
+Connection ~ 2950 6500
+Text Notes 650  4700 0    50   ~ 0
+Overlap footprints\nDo not place both
+Text Notes 650  7000 0    50   ~ 0
+Overlap footprints\nDo not place both
+$Comp
+L VDW_Modules:HSCSX U13
+U 1 1 5EE31F07
+P 1600 7300
+F 0 "U13" H 1600 7700 60  0000 C CNN
+F 1 "Pressure Blue" H 1600 7600 60  0000 C CNN
+F 2 "VDW-Modules:HoneyWell_SIP_NB" H 1500 7350 60  0001 C CNN
+F 3 "https://sensing.honeywell.com/index.php?ci_id=151133" H 1500 7350 60  0001 C CNN
+F 4 "HSCSNBN005PGAA5" H 1600 7300 50  0001 C CNN "MPN"
+F 5 "DigiKey" H 1600 7300 50  0001 C CNN "Vendor"
+F 6 "HSCSNBN005PGAA5-ND" H 1600 7300 50  0001 C CNN "Vendor P/N"
+F 7 "DNF" H 0   0   50  0001 C CNN "Config"
+	1    1600 7300
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:Battery_Cell BT1
+U 1 1 5EE62F0B
+P 9950 2350
+F 0 "BT1" H 10050 2450 50  0000 L CNN
+F 1 "Backup" H 10050 2350 50  0000 L CNN
+F 2 "Battery:BatteryHolder_Keystone_1042_1x18650" V 9950 2410 50  0001 C CNN
+F 3 "http://keyelco.com/userAssets/file/M65p27.pdf" V 9950 2410 50  0001 C CNN
+F 4 "1042" H 9950 2350 50  0001 C CNN "MPN"
+F 5 "DigiKey" H 9950 2350 50  0001 C CNN "Vendor"
+F 6 "36-1042-ND" H 9950 2350 50  0001 C CNN "Vendor P/N"
+	1    9950 2350
+	0    -1   -1   0   
+$EndComp
+NoConn ~ 8350 2050
+$Comp
+L power:+5V #PWR0163
+U 1 1 5EE871B8
+P 10500 2100
+F 0 "#PWR0163" H 10500 1950 50  0001 C CNN
+F 1 "+5V" H 10500 2240 50  0000 C CNN
+F 2 "" H 10500 2100 50  0001 C CNN
+F 3 "" H 10500 2100 50  0001 C CNN
+	1    10500 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10500 2100 10500 2550
+Wire Wire Line
+	10500 2550 9650 2550
+NoConn ~ 11650 2050
+$Comp
+L power:+5V #PWR0164
+U 1 1 5EEB9DA8
+P 13200 2100
+F 0 "#PWR0164" H 13200 1950 50  0001 C CNN
+F 1 "+5V" H 13200 2240 50  0000 C CNN
+F 2 "" H 13200 2100 50  0001 C CNN
+F 3 "" H 13200 2100 50  0001 C CNN
+	1    13200 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13200 2100 13200 2550
+Wire Wire Line
+	13200 2550 12950 2550
+Wire Wire Line
+	9750 2350 9700 2350
+$Comp
+L power:GND #PWR0165
+U 1 1 5EEECCC6
+P 10200 2350
+F 0 "#PWR0165" H 10200 2100 50  0001 C CNN
+F 1 "GND" H 10200 2200 50  0000 C CNN
+F 2 "" H 10200 2350 50  0001 C CNN
+F 3 "" H 10200 2350 50  0001 C CNN
+	1    10200 2350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10200 2350 10050 2350
+$Comp
+L MikroBUS:mikroBUS_Socket ~2
+U 1 1 5EF25809
+P 15100 7400
+F 0 "~2" H 15100 7850 50  0000 C CNN
+F 1 "mikroBUS_Socket" H 15100 6950 50  0000 C CNN
+F 2 "Socket_mikroBUS:mikroBUS_Standard_Large" H 14850 7450 50  0001 C CNN
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/Sullins%20PDFs/Female_Headers.100_DS.pdf" H 14850 7450 50  0001 C CNN
+F 4 "PPTC081LFBN-RC" H 0   0   50  0001 C CNN "MPN"
+F 5 "DigiKey" H 0   0   50  0001 C CNN "Vendor"
+F 6 "S7006-ND" H 0   0   50  0001 C CNN "Vendor P/N"
+	1    15100 7400
+	1    0    0    -1  
+$EndComp
+Text GLabel 9650 3050 2    50   Input ~ 0
+I2C_RESET
+Text GLabel 12900 7550 2    50   Input ~ 0
+SDA
+Text GLabel 12900 7450 2    50   Input ~ 0
+SCL
+$Comp
+L power:+5V #PWR020
+U 1 1 5F0633C9
+P 13150 7650
+F 0 "#PWR020" H 13150 7500 50  0001 C CNN
+F 1 "+5V" H 13150 7790 50  0000 C CNN
+F 2 "" H 13150 7650 50  0001 C CNN
+F 3 "" H 13150 7650 50  0001 C CNN
+	1    13150 7650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	13150 7650 12900 7650
+$Comp
+L power:GND #PWR09
+U 1 1 5F0859FA
+P 13000 7750
+F 0 "#PWR09" H 13000 7500 50  0001 C CNN
+F 1 "GND" H 13000 7600 50  0000 C CNN
+F 2 "" H 13000 7750 50  0001 C CNN
+F 3 "" H 13000 7750 50  0001 C CNN
+	1    13000 7750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	13000 7750 12900 7750
+$Comp
+L power:GND #PWR08
+U 1 1 5F096F33
+P 11900 7750
+F 0 "#PWR08" H 11900 7500 50  0001 C CNN
+F 1 "GND" H 11900 7600 50  0000 C CNN
+F 2 "" H 11900 7750 50  0001 C CNN
+F 3 "" H 11900 7750 50  0001 C CNN
+	1    11900 7750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	11900 7750 12000 7750
+$Comp
+L power:+3V3 #PWR07
+U 1 1 5F0A87AE
+P 11700 7650
+F 0 "#PWR07" H 11700 7500 50  0001 C CNN
+F 1 "+3V3" H 11700 7790 50  0000 C CNN
+F 2 "" H 11700 7650 50  0001 C CNN
+F 3 "" H 11700 7650 50  0001 C CNN
+	1    11700 7650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	11700 7650 12000 7650
+Text GLabel 12900 7250 2    50   Input ~ 0
+AUX_RX
+Text GLabel 12900 7350 2    50   Input ~ 0
+AUX_TX
+Text GLabel 12000 7550 0    50   Input ~ 0
+MOSI
+Text GLabel 12000 7450 0    50   Input ~ 0
+MISO
+Text GLabel 12000 7350 0    50   Input ~ 0
+SCK
+Text GLabel 12000 7150 0    50   Input ~ 0
+mikroBUS_1_RST
+Text GLabel 12000 7250 0    50   Input ~ 0
+mikroBUS_1_CS
+Text GLabel 12000 7050 0    50   Input ~ 0
+mikroBUS_1_AN
+Text GLabel 12900 7050 2    50   Input ~ 0
+mikroBUS_1_PWM
+Text GLabel 12900 7150 2    50   Input ~ 0
+mikroBUS_1_INT
+$Comp
+L power:GND #PWR026
+U 1 1 5F0CE8D2
+P 14550 7750
+F 0 "#PWR026" H 14550 7500 50  0001 C CNN
+F 1 "GND" H 14550 7600 50  0000 C CNN
+F 2 "" H 14550 7750 50  0001 C CNN
+F 3 "" H 14550 7750 50  0001 C CNN
+	1    14550 7750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	14550 7750 14650 7750
+Wire Wire Line
+	14350 7650 14650 7650
+Text GLabel 14650 7550 0    50   Input ~ 0
+MOSI
+Text GLabel 14650 7450 0    50   Input ~ 0
+MISO
+Text GLabel 14650 7350 0    50   Input ~ 0
+SCK
+Text GLabel 14650 7150 0    50   Input ~ 0
+mikroBUS_2_RST
+Text GLabel 14650 7250 0    50   Input ~ 0
+mikroBUS_2_CS
+Text GLabel 14650 7050 0    50   Input ~ 0
+mikroBUS_2_AN
+Text GLabel 15550 7550 2    50   Input ~ 0
+SDA
+Text GLabel 15550 7450 2    50   Input ~ 0
+SCL
+$Comp
+L power:+5V #PWR045
+U 1 1 5F10B3C0
+P 15800 7650
+F 0 "#PWR045" H 15800 7500 50  0001 C CNN
+F 1 "+5V" H 15800 7790 50  0000 C CNN
+F 2 "" H 15800 7650 50  0001 C CNN
+F 3 "" H 15800 7650 50  0001 C CNN
+	1    15800 7650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	15800 7650 15550 7650
+$Comp
+L power:GND #PWR044
+U 1 1 5F10B3CB
+P 15650 7750
+F 0 "#PWR044" H 15650 7500 50  0001 C CNN
+F 1 "GND" H 15650 7600 50  0000 C CNN
+F 2 "" H 15650 7750 50  0001 C CNN
+F 3 "" H 15650 7750 50  0001 C CNN
+	1    15650 7750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	15650 7750 15550 7750
+Text GLabel 15550 7250 2    50   Input ~ 0
+AUX_RX
+Text GLabel 15550 7350 2    50   Input ~ 0
+AUX_TX
+Text GLabel 15550 7050 2    50   Input ~ 0
+mikroBUS_2_PWM
+Text GLabel 15550 7150 2    50   Input ~ 0
+mikroBUS_2_INT
+Text GLabel 7950 5650 0    50   Input ~ 0
+SD_CS
+$Comp
+L power:+3V3 #PWR0166
+U 1 1 5F26E1F3
+P 14350 7650
+F 0 "#PWR0166" H 14350 7500 50  0001 C CNN
+F 1 "+3V3" H 14350 7790 50  0000 C CNN
+F 2 "" H 14350 7650 50  0001 C CNN
+F 3 "" H 14350 7650 50  0001 C CNN
+	1    14350 7650
+	0    -1   -1   0   
+$EndComp
+Text GLabel 8350 2750 0    50   Input ~ 0
+mikroBUS_1_PWM
+Text GLabel 8350 2850 0    50   Input ~ 0
+mikroBUS_2_PWM
+$Comp
+L MikroBUS:mikroBUS_Socket ~1
+U 1 1 5EE716DC
+P 12450 7400
+F 0 "~1" H 12450 7850 50  0000 C CNN
+F 1 "mikroBUS_Socket" H 12450 6950 50  0000 C CNN
+F 2 "Socket_mikroBUS:mikroBUS_Standard_Large" H 12200 7450 50  0001 C CNN
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/Sullins%20PDFs/Female_Headers.100_DS.pdf" H 12200 7450 50  0001 C CNN
+F 4 "PPTC081LFBN-RC" H 0   0   50  0001 C CNN "MPN"
+F 5 "DigiKey" H 0   0   50  0001 C CNN "Vendor"
+F 6 "S7006-ND" H 0   0   50  0001 C CNN "Vendor P/N"
+	1    12450 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP13
+U 1 1 5F192B93
+P 14950 1300
+AR Path="/5F192B93" Ref="TP13"  Part="1" 
+AR Path="/5C3B107B/5F192B93" Ref="TP?"  Part="1" 
+AR Path="/5ED93B63/5C3B107B/5F192B93" Ref="TP?"  Part="1" 
+AR Path="/5F7FD3CE/5F192B93" Ref="TP?"  Part="1" 
+F 0 "TP13" H 14950 1600 50  0000 C BNN
+F 1 "MISO" H 14950 1550 50  0000 C TNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 15150 1300 50  0001 C CNN
+F 3 "~" H 15150 1300 50  0001 C CNN
+F 4 "~" H 3850 -1950 50  0001 C CNN "Alt Vendor"
+F 5 "~" H 3850 -1950 50  0001 C CNN "Alt Vendor P/N"
+F 6 "~" H 3850 -1950 50  0001 C CNN "MPN"
+F 7 "~" H 3850 -1950 50  0001 C CNN "Vendor"
+F 8 "~" H 3850 -1950 50  0001 C CNN "Vendor P/N"
+F 9 "DNF" H 4000 -1850 50  0001 C CNN "Config"
+	1    14950 1300
+	1    0    0    -1  
+$EndComp
+Text GLabel 15350 1300 3    50   Input ~ 0
+SCK
+Text GLabel 15150 1300 3    50   Input ~ 0
+MOSI
+Text GLabel 14950 1300 3    50   Input ~ 0
+MISO
+$Comp
+L Connector:TestPoint TP14
+U 1 1 5F1BF362
+P 15150 1300
+AR Path="/5F1BF362" Ref="TP14"  Part="1" 
+AR Path="/5C3B107B/5F1BF362" Ref="TP?"  Part="1" 
+AR Path="/5ED93B63/5C3B107B/5F1BF362" Ref="TP?"  Part="1" 
+AR Path="/5F7FD3CE/5F1BF362" Ref="TP?"  Part="1" 
+F 0 "TP14" H 15150 1600 50  0000 C BNN
+F 1 "MOSI" H 15150 1550 50  0000 C TNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 15350 1300 50  0001 C CNN
+F 3 "~" H 15350 1300 50  0001 C CNN
+F 4 "~" H 4050 -1950 50  0001 C CNN "Alt Vendor"
+F 5 "~" H 4050 -1950 50  0001 C CNN "Alt Vendor P/N"
+F 6 "~" H 4050 -1950 50  0001 C CNN "MPN"
+F 7 "~" H 4050 -1950 50  0001 C CNN "Vendor"
+F 8 "~" H 4050 -1950 50  0001 C CNN "Vendor P/N"
+F 9 "DNF" H 4200 -1850 50  0001 C CNN "Config"
+	1    15150 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP15
+U 1 1 5F1BF568
+P 15350 1300
+AR Path="/5F1BF568" Ref="TP15"  Part="1" 
+AR Path="/5C3B107B/5F1BF568" Ref="TP?"  Part="1" 
+AR Path="/5ED93B63/5C3B107B/5F1BF568" Ref="TP?"  Part="1" 
+AR Path="/5F7FD3CE/5F1BF568" Ref="TP?"  Part="1" 
+F 0 "TP15" H 15350 1600 50  0000 C BNN
+F 1 "SCK" H 15350 1550 50  0000 C TNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 15550 1300 50  0001 C CNN
+F 3 "~" H 15550 1300 50  0001 C CNN
+F 4 "~" H 4250 -1950 50  0001 C CNN "Alt Vendor"
+F 5 "~" H 4250 -1950 50  0001 C CNN "Alt Vendor P/N"
+F 6 "~" H 4250 -1950 50  0001 C CNN "MPN"
+F 7 "~" H 4250 -1950 50  0001 C CNN "Vendor"
+F 8 "~" H 4250 -1950 50  0001 C CNN "Vendor P/N"
+F 9 "DNF" H 4400 -1850 50  0001 C CNN "Config"
+	1    15350 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP11
+U 1 1 5F338CAA
+P 9700 2350
+AR Path="/5F338CAA" Ref="TP11"  Part="1" 
+AR Path="/5C3B107B/5F338CAA" Ref="TP?"  Part="1" 
+AR Path="/5ED93B63/5C3B107B/5F338CAA" Ref="TP?"  Part="1" 
+AR Path="/5F7FD3CE/5F338CAA" Ref="TP?"  Part="1" 
+F 0 "TP11" H 9700 2650 50  0000 C BNN
+F 1 "BAT" H 9700 2600 50  0000 C TNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 9900 2350 50  0001 C CNN
+F 3 "~" H 9900 2350 50  0001 C CNN
+F 4 "~" H -1400 -900 50  0001 C CNN "Alt Vendor"
+F 5 "~" H -1400 -900 50  0001 C CNN "Alt Vendor P/N"
+F 6 "~" H -1400 -900 50  0001 C CNN "MPN"
+F 7 "~" H -1400 -900 50  0001 C CNN "Vendor"
+F 8 "~" H -1400 -900 50  0001 C CNN "Vendor P/N"
+F 9 "DNF" H -1250 -800 50  0001 C CNN "Config"
+	1    9700 2350
+	1    0    0    -1  
+$EndComp
+Connection ~ 9700 2350
+Wire Wire Line
+	9700 2350 9650 2350
+$Comp
+L Connector:TestPoint TP8
+U 1 1 5F33A745
+P 5350 1700
+AR Path="/5F33A745" Ref="TP8"  Part="1" 
+AR Path="/5C3B107B/5F33A745" Ref="TP?"  Part="1" 
+AR Path="/5ED93B63/5C3B107B/5F33A745" Ref="TP?"  Part="1" 
+AR Path="/5F7FD3CE/5F33A745" Ref="TP?"  Part="1" 
+F 0 "TP8" H 5350 2000 50  0000 C BNN
+F 1 "SIM RF" H 5350 1950 50  0000 C TNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 5550 1700 50  0001 C CNN
+F 3 "~" H 5550 1700 50  0001 C CNN
+F 4 "~" H -5750 -1550 50  0001 C CNN "Alt Vendor"
+F 5 "~" H -5750 -1550 50  0001 C CNN "Alt Vendor P/N"
+F 6 "~" H -5750 -1550 50  0001 C CNN "MPN"
+F 7 "~" H -5750 -1550 50  0001 C CNN "Vendor"
+F 8 "~" H -5750 -1550 50  0001 C CNN "Vendor P/N"
+F 9 "DNF" H -5600 -1450 50  0001 C CNN "Config"
+	1    5350 1700
+	1    0    0    -1  
+$EndComp
+Connection ~ 5350 1700
+Wire Wire Line
+	5350 1700 5250 1700
+$Comp
+L Connector:TestPoint TP5
+U 1 1 5F33D786
+P 3350 3900
+AR Path="/5F33D786" Ref="TP5"  Part="1" 
+AR Path="/5C3B107B/5F33D786" Ref="TP?"  Part="1" 
+AR Path="/5ED93B63/5C3B107B/5F33D786" Ref="TP?"  Part="1" 
+AR Path="/5F7FD3CE/5F33D786" Ref="TP?"  Part="1" 
+F 0 "TP5" H 3350 4200 50  0000 C BNN
+F 1 "Red_PRESS" H 3350 4150 50  0000 C TNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 3550 3900 50  0001 C CNN
+F 3 "~" H 3550 3900 50  0001 C CNN
+F 4 "~" H -7750 650 50  0001 C CNN "Alt Vendor"
+F 5 "~" H -7750 650 50  0001 C CNN "Alt Vendor P/N"
+F 6 "~" H -7750 650 50  0001 C CNN "MPN"
+F 7 "~" H -7750 650 50  0001 C CNN "Vendor"
+F 8 "~" H -7750 650 50  0001 C CNN "Vendor P/N"
+F 9 "DNF" H -7600 750 50  0001 C CNN "Config"
+	1    3350 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP6
+U 1 1 5F33E910
+P 3350 6200
+AR Path="/5F33E910" Ref="TP6"  Part="1" 
+AR Path="/5C3B107B/5F33E910" Ref="TP?"  Part="1" 
+AR Path="/5ED93B63/5C3B107B/5F33E910" Ref="TP?"  Part="1" 
+AR Path="/5F7FD3CE/5F33E910" Ref="TP?"  Part="1" 
+F 0 "TP6" H 3350 6500 50  0000 C BNN
+F 1 "Blue_PRESS" H 3350 6450 50  0000 C TNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 3550 6200 50  0001 C CNN
+F 3 "~" H 3550 6200 50  0001 C CNN
+F 4 "~" H -7750 2950 50  0001 C CNN "Alt Vendor"
+F 5 "~" H -7750 2950 50  0001 C CNN "Alt Vendor P/N"
+F 6 "~" H -7750 2950 50  0001 C CNN "MPN"
+F 7 "~" H -7750 2950 50  0001 C CNN "Vendor"
+F 8 "~" H -7750 2950 50  0001 C CNN "Vendor P/N"
+F 9 "DNF" H -7600 3050 50  0001 C CNN "Config"
+	1    3350 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP7
+U 1 1 5F33F25B
+P 3700 8800
+AR Path="/5F33F25B" Ref="TP7"  Part="1" 
+AR Path="/5C3B107B/5F33F25B" Ref="TP?"  Part="1" 
+AR Path="/5ED93B63/5C3B107B/5F33F25B" Ref="TP?"  Part="1" 
+AR Path="/5F7FD3CE/5F33F25B" Ref="TP?"  Part="1" 
+F 0 "TP7" H 3700 9100 50  0000 C BNN
+F 1 "Blue_LIQ" H 3700 9050 50  0000 C TNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 3900 8800 50  0001 C CNN
+F 3 "~" H 3900 8800 50  0001 C CNN
+F 4 "~" H -7400 5550 50  0001 C CNN "Alt Vendor"
+F 5 "~" H -7400 5550 50  0001 C CNN "Alt Vendor P/N"
+F 6 "~" H -7400 5550 50  0001 C CNN "MPN"
+F 7 "~" H -7400 5550 50  0001 C CNN "Vendor"
+F 8 "~" H -7400 5550 50  0001 C CNN "Vendor P/N"
+F 9 "DNF" H -7250 5650 50  0001 C CNN "Config"
+	1    3700 8800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP3
+U 1 1 5F340576
+P 2200 9100
+AR Path="/5F340576" Ref="TP3"  Part="1" 
+AR Path="/5C3B107B/5F340576" Ref="TP?"  Part="1" 
+AR Path="/5ED93B63/5C3B107B/5F340576" Ref="TP?"  Part="1" 
+AR Path="/5F7FD3CE/5F340576" Ref="TP?"  Part="1" 
+F 0 "TP3" H 2300 9200 50  0000 C BNN
+F 1 "Red_LIQ" H 2200 9350 50  0000 C TNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 2400 9100 50  0001 C CNN
+F 3 "~" H 2400 9100 50  0001 C CNN
+F 4 "~" H -8900 5850 50  0001 C CNN "Alt Vendor"
+F 5 "~" H -8900 5850 50  0001 C CNN "Alt Vendor P/N"
+F 6 "~" H -8900 5850 50  0001 C CNN "MPN"
+F 7 "~" H -8900 5850 50  0001 C CNN "Vendor"
+F 8 "~" H -8900 5850 50  0001 C CNN "Vendor P/N"
+F 9 "DNF" H -8750 5950 50  0001 C CNN "Config"
+	1    2200 9100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP12
+U 1 1 5F3419EC
+P 10850 9200
+AR Path="/5F3419EC" Ref="TP12"  Part="1" 
+AR Path="/5C3B107B/5F3419EC" Ref="TP?"  Part="1" 
+AR Path="/5ED93B63/5C3B107B/5F3419EC" Ref="TP?"  Part="1" 
+AR Path="/5F7FD3CE/5F3419EC" Ref="TP?"  Part="1" 
+F 0 "TP12" H 10850 9500 50  0000 C BNN
+F 1 "Temp" H 10850 9450 50  0000 C TNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 11050 9200 50  0001 C CNN
+F 3 "~" H 11050 9200 50  0001 C CNN
+F 4 "~" H -250 5950 50  0001 C CNN "Alt Vendor"
+F 5 "~" H -250 5950 50  0001 C CNN "Alt Vendor P/N"
+F 6 "~" H -250 5950 50  0001 C CNN "MPN"
+F 7 "~" H -250 5950 50  0001 C CNN "Vendor"
+F 8 "~" H -250 5950 50  0001 C CNN "Vendor P/N"
+F 9 "DNF" H -100 6050 50  0001 C CNN "Config"
+	1    10850 9200
+	1    0    0    -1  
+$EndComp
+Connection ~ 10850 9200
+Wire Wire Line
+	10850 9200 10950 9200
+$Comp
+L Connector:TestPoint TP9
+U 1 1 5F362906
+P 7950 5550
+AR Path="/5F362906" Ref="TP9"  Part="1" 
+AR Path="/5C3B107B/5F362906" Ref="TP?"  Part="1" 
+AR Path="/5ED93B63/5C3B107B/5F362906" Ref="TP?"  Part="1" 
+AR Path="/5F7FD3CE/5F362906" Ref="TP?"  Part="1" 
+F 0 "TP9" H 7950 5850 50  0000 C BNN
+F 1 "SD_CS" H 7950 5800 50  0000 C TNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 8150 5550 50  0001 C CNN
+F 3 "~" H 8150 5550 50  0001 C CNN
+F 4 "~" H -3150 2300 50  0001 C CNN "Alt Vendor"
+F 5 "~" H -3150 2300 50  0001 C CNN "Alt Vendor P/N"
+F 6 "~" H -3150 2300 50  0001 C CNN "MPN"
+F 7 "~" H -3150 2300 50  0001 C CNN "Vendor"
+F 8 "~" H -3150 2300 50  0001 C CNN "Vendor P/N"
+F 9 "DNF" H -3000 2400 50  0001 C CNN "Config"
+	1    7950 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7950 5550 7950 5650
+Wire Wire Line
+	8100 5650 7950 5650
+$Comp
+L Connector:TestPoint TP10
+U 1 1 5F3A2025
+P 7950 6550
+AR Path="/5F3A2025" Ref="TP10"  Part="1" 
+AR Path="/5C3B107B/5F3A2025" Ref="TP?"  Part="1" 
+AR Path="/5ED93B63/5C3B107B/5F3A2025" Ref="TP?"  Part="1" 
+AR Path="/5F7FD3CE/5F3A2025" Ref="TP?"  Part="1" 
+F 0 "TP10" H 7950 6850 50  0000 C BNN
+F 1 "SD_DET" H 7950 6800 50  0000 C TNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 8150 6550 50  0001 C CNN
+F 3 "~" H 8150 6550 50  0001 C CNN
+F 4 "~" H -3150 3300 50  0001 C CNN "Alt Vendor"
+F 5 "~" H -3150 3300 50  0001 C CNN "Alt Vendor P/N"
+F 6 "~" H -3150 3300 50  0001 C CNN "MPN"
+F 7 "~" H -3150 3300 50  0001 C CNN "Vendor"
+F 8 "~" H -3150 3300 50  0001 C CNN "Vendor P/N"
+F 9 "DNF" H -3000 3400 50  0001 C CNN "Config"
+	1    7950 6550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7950 6550 7950 6350
+Wire Wire Line
+	7950 6350 8100 6350
+$Comp
+L Jumper:SolderJumper_2_Open JP6
+U 1 1 5EE1A368
+P 2700 1950
+F 0 "JP6" H 2500 2000 50  0000 C CNN
+F 1 "Jumper_NO_Small" H 2700 1850 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 2700 1950 50  0001 C CNN
+F 3 "~" H 2700 1950 50  0001 C CNN
+F 4 "N/A" H 2700 1950 50  0001 C CNN "MPN"
+F 5 "N/A" H 2700 1950 50  0001 C CNN "Vendor"
+F 6 "N/A" H 2700 1950 50  0001 C CNN "Vendor P/N"
+F 7 "N/A" H 2700 1950 50  0001 C CNN "Alt Vendor"
+F 8 "N/A" H 2700 1950 50  0001 C CNN "Alt Vendor P/N"
+F 9 "DNF" H 2700 1950 50  0001 C CNN "Config"
+	1    2700 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP5
+U 1 1 5EE1A35B
+P 2700 1850
+F 0 "JP5" H 2500 1900 50  0000 C CNN
+F 1 "Jumper_NO_Small" H 2700 1750 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 2700 1850 50  0001 C CNN
+F 3 "~" H 2700 1850 50  0001 C CNN
+F 4 "N/A" H 2700 1850 50  0001 C CNN "MPN"
+F 5 "N/A" H 2700 1850 50  0001 C CNN "Vendor"
+F 6 "N/A" H 2700 1850 50  0001 C CNN "Vendor P/N"
+F 7 "N/A" H 2700 1850 50  0001 C CNN "Alt Vendor"
+F 8 "N/A" H 2700 1850 50  0001 C CNN "Alt Vendor P/N"
+F 9 "DNF" H 2700 1850 50  0001 C CNN "Config"
+	1    2700 1850
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 9100 11150 1450 950 
+U 5EF8A3E3
+F0 "Cable" 50
+F1 "Cable.sch" 50
+$EndSheet
+$EndSCHEMATC

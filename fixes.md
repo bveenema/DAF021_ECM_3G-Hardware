@@ -1,0 +1,4 @@
+- C7 part (was 0402, needs to be 0805)
+- J15 BOM callout was wrong
+- PS1 footprint pins swapped
+- R3 and R6 wrong value

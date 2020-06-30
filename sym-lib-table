@@ -1,0 +1,13 @@
+(sym_lib_table
+  (lib (name VDW_Modules)(type Legacy)(uri ${KIPRJMOD}/lib/VDW-Kicad-Symbols/VDW_Modules.lib)(options "")(descr ""))
+  (lib (name VDW_Pnuematic)(type Legacy)(uri ${KIPRJMOD}/lib/VDW-Kicad-Symbols/VDW_Pnuematic.lib)(options "")(descr ""))
+  (lib (name MCU_Particle-VDW)(type Legacy)(uri ${KIPRJMOD}/lib/VDW-Kicad-Symbols/MCU_Particle-VDW.lib)(options "")(descr ""))
+  (lib (name VDW_Device)(type Legacy)(uri ${KIPRJMOD}/lib/VDW-Kicad-Symbols/VDW_Device.lib)(options "")(descr ""))
+  (lib (name KiCable)(type Legacy)(uri ${KIPRJMOD}/lib/KiCable/lib/KiCable.lib)(options "")(descr ""))
+  (lib (name KiCable_Housing_Generic)(type Legacy)(uri ${KIPRJMOD}/lib/KiCable/lib/KiCable_Housing_Generic.lib)(options "")(descr ""))
+  (lib (name KiCable_Housing_JST)(type Legacy)(uri ${KIPRJMOD}/lib/KiCable/lib/KiCable_Housing_JST.lib)(options "")(descr ""))
+  (lib (name KiCable_Housing_Molex)(type Legacy)(uri ${KIPRJMOD}/lib/KiCable/lib/KiCable_Housing_Molex.lib)(options "")(descr ""))
+  (lib (name KiCable_Terminal_Generic)(type Legacy)(uri ${KIPRJMOD}/lib/KiCable/lib/KiCable_Terminal_Generic.lib)(options "")(descr ""))
+  (lib (name KiCable_Terminal_JST)(type Legacy)(uri ${KIPRJMOD}/lib/KiCable/lib/KiCable_Terminal_JST.lib)(options "")(descr ""))
+  (lib (name KiCable_Terminal_Molex)(type Legacy)(uri ${KIPRJMOD}/lib/KiCable/lib/KiCable_Terminal_Molex.lib)(options "")(descr ""))
+)

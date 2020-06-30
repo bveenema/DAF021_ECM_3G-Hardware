@@ -1,0 +1,12 @@
+[submodule "lib/VDW-Kicad-Footprints"]
+	path = lib/VDW-Kicad-Footprints
+	url = https://github.com/bveenema/VDW-Kicad-Footprints.git
+	branch = master
+[submodule "lib/VDW-Kicad-Symbols"]
+	path = lib/VDW-Kicad-Symbols
+	url = https://github.com/bveenema/VDW-Kicad-Symbols.git
+	branch = master
+[submodule "lib/KiCable"]
+	path = lib/KiCable
+	url = https://github.com/bveenema/KiCable.git
+	branch = master
