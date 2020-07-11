@@ -1589,7 +1589,6 @@ Text GLabel 11650 2550 0    50   Input ~ 0
 CoBlend_DIR_LV
 Text GLabel 11650 2450 0    50   Input ~ 0
 CoBlend_EN_LV
-NoConn ~ 11650 2350
 $Comp
 L MCU_Particle-VDW:Argon U5
 U 1 1 601EF3F8
@@ -2642,4 +2641,14 @@ U 5EF8A3E3
 F0 "Cable" 50
 F1 "Cable.sch" 50
 $EndSheet
+Text GLabel 11600 2350 0    50   Input ~ 0
+MOTOR_INT
+NoConn ~ 11650 2350
+Wire Wire Line
+	11600 2350 11650 2350
+Text GLabel 10100 2750 2    50   Input ~ 0
+MOTOR_INT
+Wire Wire Line
+	10100 2750 9650 2750
+NoConn ~ 9850 2750
 $EndSCHEMATC
